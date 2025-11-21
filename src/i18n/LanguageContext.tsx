@@ -15,6 +15,7 @@ import {
 } from 'react';
 import type { Language, Translations } from './types';
 import { en } from './translations/en';
+import { es } from './translations/es';
 import { fr } from './translations/fr';
 
 interface LanguageContextValue {
@@ -29,7 +30,7 @@ const STORAGE_KEY = 'business-spa-language';
 const getInitialLanguage = (): Language => {
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored === 'en' || stored === 'fr') {
+    if (stored === 'en' || stored === 'es' || stored === 'fr') {
       return stored;
     }
   } catch (error) {
@@ -69,6 +70,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
 
   // Get the current translations based on language
   const translations = useMemo(() => {
+    if (language === 'es') return es;
     if (language === 'fr') return fr;
     return en;
   }, [language]);

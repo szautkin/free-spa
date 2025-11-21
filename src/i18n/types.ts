@@ -3,7 +3,7 @@
  * Strict TypeScript types for internationalization
  */
 
-export type Language = 'en' | 'fr';
+export type Language = 'en' | 'es' | 'fr';
 
 export interface NavTranslations {
   home: string;

@@ -1,5 +1,5 @@
 /**
- * English Translations
+ * English Translations - Mechanic Shop
  * All English text organized by section
  */
 
@@ -10,251 +10,251 @@ export const en: Translations = {
 
   nav: {
     home: 'Home',
-    journey: 'Journey',
-    chronicles: 'Chronicles',
+    journey: 'Services',
+    chronicles: 'About',
     gallery: 'Gallery',
-    gorlitz: 'Görlitz',
-    voices: 'Voices',
+    gorlitz: 'Location',
+    voices: 'Testimonials',
   },
 
   hero: {
-    title: 'Across Miles, Together Again',
-    subtitle: 'One brother. One journey. One unforgettable week.',
-    date: 'November 8-14, 2025',
-    location: 'Görlitz, Germany',
+    title: 'Precision Auto Care',
+    subtitle: 'Your Trusted Auto Repair Partner',
+    date: '',
+    location: 'Springfield, IL',
     stats: {
-      miles: 'Miles',
-      days: 'Days',
-      memories: 'Memories',
-      places: 'Places',
+      miles: 'Years',
+      days: 'Technicians',
+      memories: 'Customers',
+      places: 'Services',
     },
-    scrollDown: 'Scroll down to journey section',
-    loadingMemories: 'Loading memories...',
+    scrollDown: 'Scroll down to services section',
+    loadingMemories: 'Loading...',
     photoIndicator: 'View photo {current} of {total}',
   },
 
   journey: {
-    title: 'Miles to Memories',
-    subtitle: 'A journey of thousands of miles for seven days of love',
+    title: 'Our Services',
+    subtitle: 'Expert auto repair and maintenance for all makes and models',
     stats: {
-      milesTraveled: 'Miles Traveled',
-      milesValue: '2,847',
-      hoursInTransit: 'Hours in Transit',
-      hoursValue: '14',
-      preciousDays: 'Precious Days Together',
-      daysValue: '7',
+      milesTraveled: 'Years of Experience',
+      milesValue: '19',
+      hoursInTransit: 'Certified Technicians',
+      hoursValue: '8',
+      preciousDays: 'Satisfied Customers',
+      daysValue: '5000+',
     },
     narrative: {
-      title: 'A Journey Worth Every Mile',
+      title: 'Quality Service You Can Trust',
       paragraph1:
-        'From across the Atlantic, the brother embarked on a journey that would take him through three flights and two continents. Each mile bringing him closer to a reunion years in the making.',
+        'At Precision Auto Care, we understand that your vehicle is more than just transportation—it\'s your freedom, your livelihood, and your family\'s safety. That\'s why we treat every car that comes through our doors with the same care and attention we\'d give our own.',
       paragraph2:
-        'Through bustling airports and quiet moments above the clouds, anticipation grew with every passing hour. The thought of seeing family again—of embracing his sister, meeting his niece, and spending precious time with his mother—made every minute of travel worthwhile.',
+        'Our team of ASE-certified technicians brings over 75 years of combined experience to every job. From routine maintenance to complex diagnostics, we use state-of-the-art equipment and genuine parts to ensure your vehicle runs at peak performance.',
       quote:
-        'When distance is measured in love, no journey is too long. When the destination is family, every mile becomes a celebration of what truly matters.',
+        'We believe in transparent, honest service. Before we begin any work, we\'ll explain what needs to be done and why. No surprises, no hidden fees—just straightforward solutions to keep you on the road safely.',
     },
     timeline: {
       departure: {
-        title: 'Departure',
+        title: 'Preventive Maintenance',
         description:
-          'Leaving home with a heart full of anticipation, ready to bridge the miles that separate family',
+          'Regular services to keep your vehicle running smoothly',
       },
       journey: {
-        title: 'Journey',
+        title: 'Repairs & Diagnostics',
         description:
-          'Through layovers and time zones, the excitement builds. Each flight brings family closer',
+          'Expert troubleshooting and repair services',
       },
       arrival: {
-        title: 'Arrival',
+        title: 'Specialty Services',
         description:
-          'Finally, Görlitz. The moment of reunion, where journey ends and memories begin',
+          'Advanced services and custom work for all your needs',
       },
     },
-    mapPlaceholder: 'Interactive journey map coming soon',
-    mapSubtitle: 'Visualizing the path from departure to reunion',
+    mapPlaceholder: 'Our Core Services',
+    mapSubtitle: 'Complete service to keep your vehicle in top condition',
   },
 
   chronicles: {
-    title: 'Seven Days of Forever',
-    subtitle: 'Every day a chapter in our story',
-    dayLabel: 'Day',
+    title: 'About Us',
+    subtitle: 'Quality service since 2005',
+    dayLabel: 'Step',
     timeline: {
       day1: {
-        title: 'The Journey Begins',
-        theme: 'Reunion',
+        title: 'Our Story',
+        theme: 'Foundation',
         description:
-          'After years apart, the moment finally arrived. A journey across continents to embrace family once more. The excitement was palpable, the anticipation electric.',
-        quote: 'Every mile traveled was worth it for this moment.',
-        quoteAuthor: 'Brother',
+          'Founded in 2005, Precision Auto Care has been serving the Springfield community for nearly two decades. What started as a small family-owned repair shop has grown into the trusted destination for automotive service in the area.',
+        quote: 'Quality, honesty, and integrity in every job.',
+        quoteAuthor: 'Founder',
       },
       day2: {
-        title: 'First Hellos',
-        theme: 'Connection',
+        title: 'ASE Certified',
+        theme: 'Excellence',
         description:
-          'The morning brought coffee and conversation. Little hands reached out, smiles spread across faces. The city welcomed us with open arms as we wandered through historic streets, discovering magic around every corner.',
-        quote: 'Watching them meet was like watching love multiply.',
-        quoteAuthor: 'Mother',
+          'All our technicians are certified by the National Institute for Automotive Service Excellence (ASE). We maintain the highest industry standards and stay current with the latest automotive technologies.',
+        quote: 'Ongoing education is key to exceptional service.',
+        quoteAuthor: 'Lead Technician',
       },
       day3: {
-        title: 'Exploring Together',
-        theme: 'Adventure',
+        title: 'Modern Equipment',
+        theme: 'Technology',
         description:
-          'A day of quiet exploration. Sometimes the best moments are the ones between the photographs—the laughter, the stories, the comfortable silences that speak volumes.',
-        quote: 'Not every moment needs to be captured to be cherished.',
-        quoteAuthor: 'Brother',
+          'We invest in the latest diagnostic tools and repair equipment. Our shop features state-of-the-art computer scanners, hydraulic lifts, and specialized tools for all makes and models.',
+        quote: 'The right tools make the right job possible.',
+        quoteAuthor: 'Service Manager',
       },
       day4: {
-        title: 'City Magic',
-        theme: 'Discovery',
+        title: 'Quality Parts',
+        theme: 'Reliability',
         description:
-          'The city revealed its secrets today. From morning light painting the streets to afternoon adventures and quiet evening reflections. Each moment a treasure, each smile a gift.',
-        quote: 'Home is wherever we are together.',
-        quoteAuthor: 'Family',
+          'We use only OEM and premium aftermarket parts with warranty coverage. Your vehicle deserves the best, and we ensure every part meets our high quality standards.',
+        quote: 'Quality parts mean lasting repairs.',
+        quoteAuthor: 'Parts Specialist',
       },
       day5: {
-        title: 'Quiet Moments',
-        theme: 'Togetherness',
+        title: 'Customer First',
+        theme: 'Service',
         description:
-          'Midweek brought a comfortable rhythm. No rush, no agenda—just being. Shared meals, shared laughter, shared life. These are the moments that weave themselves into the fabric of family.',
-        quote: 'The best gift is time, freely given and gratefully received.',
-        quoteAuthor: 'Mother',
+          'Your satisfaction is our priority. We offer transparent pricing, honest assessments, and exceptional service. We take the time to explain every repair and answer all your questions.',
+        quote: 'Happy customers are our best advertising.',
+        quoteAuthor: 'Customer Relations Manager',
       },
       day6: {
-        title: 'Last Adventures',
-        theme: 'Savoring',
+        title: 'Community Involvement',
+        theme: 'Community',
         description:
-          'With the end in sight, every moment became more precious. We savored each experience, knowing that tomorrow would bring farewells. But today—today was still ours.',
-        quote: 'Let us not count the hours but make the hours count.',
-        quoteAuthor: 'Brother',
+          'We\'re proud to be part of the Springfield community. We support local sports teams, charity events, and schools. Your trust drives us to give back.',
+        quote: 'Serving our community is an honor.',
+        quoteAuthor: 'Owner',
       },
       day7: {
-        title: 'Bittersweet Farewells',
-        theme: 'Forever',
+        title: 'Your Trusted Partner',
+        theme: 'Commitment',
         description:
-          'The final morning arrived too soon. Hugs lingered a little longer, smiles were a little brighter, eyes a little mistier. This is not goodbye—it is "until we meet again." The miles between us are merely numbers; the love is infinite.',
-        quote: 'Distance means so little when someone means so much.',
-        quoteAuthor: 'Family',
+          'We\'re committed to being your trusted partner for all automotive needs. From routine oil changes to major engine repairs, we\'ve got you covered.',
+        quote: 'Keeping you safely on the road, one vehicle at a time.',
+        quoteAuthor: 'Precision Auto Care Team',
       },
     },
   },
 
   gallery: {
-    title: 'Captured Hearts',
-    subtitle: 'Every moment, preserved with love',
+    title: 'Our Work',
+    subtitle: 'Quality workmanship you can trust',
     photoCount: {
       single: 'photo',
       multiple: 'photos',
     },
     categories: {
-      all: 'All Moments',
-      firstHellos: 'First Hellos',
-      littleWonders: 'Little Wonders',
-      mothersJoy: "Mother's Joy",
-      gorlitzMagic: 'Görlitz Magic',
-      tableTales: 'Table Tales',
-      quietTogether: 'Quiet Together',
+      all: 'All',
+      firstHellos: 'Shop',
+      littleWonders: 'Services',
+      mothersJoy: 'Team',
+      gorlitzMagic: 'Customer Cars',
+      tableTales: 'Before & After',
+      quietTogether: 'Community',
     },
     categoryDescriptions: {
-      all: 'Every precious memory',
-      firstHellos: 'Reunion moments',
-      littleWonders: "Niece's precious moments",
-      mothersJoy: 'Mom with her children',
-      gorlitzMagic: 'Exploring the city',
-      tableTales: 'Meals and conversations',
-      quietTogether: 'Candid, peaceful moments',
+      all: 'View all photos',
+      firstHellos: 'Our modern facilities',
+      littleWonders: 'Services in progress',
+      mothersJoy: 'Meet our team',
+      gorlitzMagic: 'Vehicles we service',
+      tableTales: 'Repair results',
+      quietTogether: 'Community events',
     },
     emptyState: 'No photos found in this category.',
   },
 
   gorlitz: {
-    title: 'Our Week, Our City',
-    subtitle: 'Görlitz: the backdrop to our memories',
+    title: 'Visit Us',
+    subtitle: 'Conveniently located in Springfield',
     cityIntro: {
-      title: 'A City Frozen in Time',
+      title: 'Your Local Repair Shop',
       paragraph1:
-        "Nestled on the German-Polish border, Görlitz is one of Germany's best-preserved medieval cities. With its cobblestone streets, baroque architecture, and bridges spanning the Neisse River, it became more than just a location—it was the perfect stage for our family reunion.",
+        'Located at 456 Mechanic Avenue in the heart of Springfield, Precision Auto Care is conveniently situated to serve the entire metro area. Our state-of-the-art facility features 8 service bays, a comfortable waiting area, and ample parking.',
       paragraph2:
-        'Every corner turned revealed new beauty. Every street held the promise of another shared moment. This historic city witnessed our laughter, our conversations, and our love.',
+        'We\'re open Monday through Saturday with convenient hours to fit your schedule. Walk-ins are welcome, or schedule your appointment online for even faster service.',
     },
     locations: {
       cafe: {
-        name: 'Corner Café',
+        name: 'Waiting Area',
         description:
-          'Our morning ritual spot for coffee and cake, where conversations flowed as freely as the coffee.',
-        highlight: 'The place where every day began with warmth',
+          'Comfortable waiting area with free WiFi, complimentary coffee, and refreshments',
+        highlight: 'Relax while we work on your vehicle',
       },
       bridge: {
-        name: 'Old Town Bridge',
+        name: 'Service Bays',
         description:
-          'Historic bridge spanning the Neisse River, offering breathtaking views of the old city architecture.',
-        highlight: 'Where we captured our favorite family photos',
+          '8 fully-equipped service bays with modern tools and diagnostic equipment',
+        highlight: 'Professional workspace for quality service',
       },
       park: {
-        name: 'City Park',
+        name: 'Parking',
         description:
-          "Nature's playground where our niece discovered autumn leaves and we found peaceful moments together.",
-        highlight: 'Laughter echoing through golden trees',
+          'Ample customer parking with easy access for drop-off and pick-up',
+        highlight: 'Convenient for drop-off and pick-up',
       },
       restaurant: {
-        name: 'Family Dinner Spot',
+        name: 'Shuttle Service',
         description:
-          'Traditional German restaurant where we shared meals, stories, and created memories over hearty food.',
-        highlight: 'The table where family bonds grew stronger',
+          'Courtesy shuttle service available within the Springfield area',
+        highlight: 'Don\'t get stranded while your car is in service',
       },
     },
-    mapPlaceholder: 'Interactive map with our daily routes coming soon',
-    mapSubtitle: 'Trace our footsteps through this historic city',
+    mapPlaceholder: 'Location map coming soon',
+    mapSubtitle: 'Find us at 456 Mechanic Avenue, Springfield, IL',
   },
 
   voices: {
-    title: 'In Our Words',
-    subtitle: 'Reflections on a week that touched our hearts',
+    title: 'Customer Testimonials',
+    subtitle: 'What our customers say about us',
     quotes: {
       brother: {
-        text: "Every mile traveled fades away the moment you're in each other's arms. Fourteen hours of flights became fourteen seconds of anticipation when I saw my family waiting for me.",
-        author: 'The Brother',
-        role: 'The Traveler',
+        text: 'I\'ve been bringing my car to Precision for 5 years now. They\'re always honest, fair, and do excellent work. Never had them push unnecessary work on me. Highly recommended!',
+        author: 'Mike Johnson',
+        role: 'Customer since 2019',
       },
       sister: {
-        text: "Opening our home meant opening our hearts even wider. Watching my brother with my daughter, seeing mom's joy—these weren't just visits, they were chapters in our family story being written together.",
-        author: 'The Sister',
-        role: 'The Host',
+        text: 'As a woman, I\'ve often felt taken advantage of at repair shops. Not here. The team at Precision takes the time to explain everything, show me the old parts, and I never feel pressured. Finally found a mechanic I trust.',
+        author: 'Sarah Martinez',
+        role: 'Customer since 2020',
       },
       mother: {
-        text: 'To see my children together again, to hold them both close, to watch the next generation discover family bonds—this is what mothers dream of. Seven days felt like seven years of love compressed into pure joy.',
-        author: 'Mother',
-        role: 'The Heart',
+        text: 'Outstanding service at fair prices. They explained exactly what was wrong with my car, what was urgent, and what could wait. Work was completed on time and my car runs better than ever. Thank you, Precision!',
+        author: 'Robert Chen',
+        role: 'Customer since 2018',
       },
       niece: {
-        text: 'I learned that family is bigger than one house. Uncle came from very far away just to play with me and make mommy smile. That means we are very special to him.',
-        author: 'The Niece',
-        role: 'The Wonder',
+        text: 'Moved to Springfield last year and was nervous about finding a good mechanic. A neighbor recommended Precision and they haven\'t disappointed. Professional, quick, and honest. My go-to place for all auto service.',
+        author: 'Jennifer Williams',
+        role: 'Customer since 2023',
       },
     },
     closingReflection:
-      'Four voices, one heart. Four perspectives, one unforgettable week.',
+      'Join thousands of satisfied customers who trust Precision Auto Care',
   },
 
   footer: {
     about: {
-      title: 'Görlitz 2025',
+      title: 'Precision Auto Care',
       description:
-        'A digital memory of love, laughter, and connection. Preserving one unforgettable week together across miles.',
+        'Your trusted auto repair partner. Quality service since 2005.',
     },
     ourStory: {
-      title: 'Our Story',
-      journey: 'The Journey',
-      dailyChronicles: 'Daily Chronicles',
-      photoGallery: 'Photo Gallery',
-      familyVoices: 'Family Voices',
+      title: 'Quick Links',
+      journey: 'Services',
+      dailyChronicles: 'About Us',
+      photoGallery: 'Gallery',
+      familyVoices: 'Testimonials',
     },
     foreverConnected: {
-      title: 'Forever Connected',
+      title: 'Hours of Operation',
       message:
-        'Distance cannot diminish love. This week reminded us that family is forever, no matter the miles between us.',
+        'Mon-Fri: 8:00 AM - 6:00 PM | Sat: 8:00 AM - 4:00 PM | Sun: Closed',
     },
-    madeWithLove: 'for the Görlitz family',
-    copyright: 'Görlitz Family Reunion. All memories preserved with love.',
+    madeWithLove: 'Quality service since 2005',
+    copyright: '© 2024 Precision Auto Care. All rights reserved.',
   },
 
   common: {
