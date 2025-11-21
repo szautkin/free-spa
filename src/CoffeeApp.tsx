@@ -1,6 +1,5 @@
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import CoffeeShopApp from './coffee-shop/CoffeeShopApp';
-import { electricianContent } from './config';
 import appTheme from './config';
 import { LanguageProvider } from './i18n/LanguageContext';
 
