@@ -34,14 +34,15 @@ export interface AboutContent {
   }[];
 }
 
-export interface ServiceItem {
+
+export interface MenuItem {
   id: string;
   name: string;
   description: string;
   price: string;
   category: string;
   featured?: boolean;
-  tags?: string[];  // e.g., 'emergency', 'residential', 'commercial'
+  tags?: string[];
 }
 
 export interface MenuContent {
@@ -53,7 +54,7 @@ export interface MenuContent {
     name: string;
     description: string;
   }[];
-  items: ServiceItem[];
+  items: MenuItem[];
 }
 
 export interface GalleryContent {

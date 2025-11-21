@@ -4,9 +4,9 @@
  * This file centralizes all configuration imports for easy access throughout the application.
  */
 
-export { coffeeTheme, type ThemeConfig } from './theme.config';
-export { coffeeContent, type ContentConfig } from './content.config';
-export { coffeeAssets, type AssetsConfig, getImagePath, getImageWithFallback } from './assets.config';
+export { electricianTheme as default, type ThemeConfig } from './theme.config';
+export { electricianContent, type ContentConfig } from './content.config';
+export { electricianAssets, type AssetsConfig, getImagePath, getImageWithFallback } from './assets.config';
 export { useContent } from './useContent';
 
 // Re-export commonly used types
