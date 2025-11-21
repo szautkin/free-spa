@@ -1,7 +1,7 @@
 /**
- * COFFEE SHOP THEME CONFIGURATION
+ * ELECTRICIAN THEME CONFIGURATION
  *
- * This file contains all UI/UX settings for the coffee shop application.
+ * This file contains all UI/UX settings for the electrician application.
  * Modify these values to customize the entire look and feel of the site.
  *
  * All colors support hex, rgb, rgba, hsl formats
@@ -203,48 +203,50 @@ export interface ThemeConfig {
 }
 
 // ========================================
-// COFFEE SHOP THEME CONFIGURATION
+// ELECTRICIAN THEME CONFIGURATION
 // ========================================
 
-export const coffeeTheme: ThemeConfig = {
+export const electricianTheme: ThemeConfig = {
   // COLORS
+  // Customize: Bold red primary with clean white secondary for professional electrician feel
   colors: {
     primary: {
-      main: '#6F4E37',        // Rich coffee brown
-      light: '#8B6F47',       // Light mocha
-      dark: '#4A3225',        // Dark espresso
+      main: '#DC143C',        // Vibrant crimson red
+      light: '#FF6B6B',       // Light coral red
+      dark: '#B91C1C',        // Deep red
       contrastText: '#FFFFFF',
     },
     secondary: {
-      main: '#D4A574',        // Warm caramel
-      light: '#E8C9A0',       // Light cream
-      dark: '#B8935F',        // Deep caramel
-      contrastText: '#2C2013',
+      main: '#FFFFFF',        // Pure white
+      light: '#F9FAFB',       // Off-white
+      dark: '#E5E7EB',        // Light gray
+      contrastText: '#1F2937',
     },
     background: {
-      default: '#FFF9F5',     // Soft cream white
-      paper: '#FFFFFF',       // Pure white
-      dark: '#2C2013',        // Dark coffee
-      light: '#F5EFE7',       // Light beige
+      default: '#FFFFFF',     // Clean white
+      paper: '#F9FAFB',       // Off-white paper
+      dark: '#1F2937',        // Dark gray
+      light: '#F3F4F6',       // Very light gray
     },
     text: {
-      primary: '#2C2013',     // Dark brown
-      secondary: '#5C4A3A',   // Medium brown
-      disabled: '#A89585',    // Light brown
-      hint: '#C4B5A0',        // Very light brown
+      primary: '#111827',     // Near black
+      secondary: '#4B5563',   // Dark gray
+      disabled: '#9CA3AF',    // Medium gray
+      hint: '#D1D5DB',        // Light gray
     },
-    success: '#52B788',       // Fresh green (for fresh/organic indicators)
-    warning: '#F77F00',       // Warm orange
-    error: '#D00000',         // Red
-    info: '#6B89AF',          // Muted blue
+    success: '#10B981',       // Green (for safety/verified indicators)
+    warning: '#F59E0B',       // Amber (for caution/attention)
+    error: '#EF4444',         // Red
+    info: '#3B82F6',          // Blue (for information)
   },
 
   // TYPOGRAPHY
+  // Customize: Clean, professional fonts for trustworthy electrician brand
   typography: {
     fontFamily: {
       primary: "'Inter', 'Helvetica Neue', Arial, sans-serif",
-      heading: "'Playfair Display', 'Georgia', serif",
-      accent: "'Dancing Script', cursive",
+      heading: "'Poppins', 'Inter', 'Helvetica Neue', sans-serif",
+      accent: "'Montserrat', 'Inter', sans-serif",
       mono: "'JetBrains Mono', 'Courier New', monospace",
     },
     fontSize: {
@@ -316,14 +318,15 @@ export const coffeeTheme: ThemeConfig = {
   },
 
   // BORDER RADIUS
+  // Customize: Moderate rounding for modern, professional look
   borderRadius: {
     none: '0',
     sm: '0.125rem',   // 2px
-    base: '0.25rem',  // 4px
-    md: '0.375rem',   // 6px
-    lg: '0.5rem',     // 8px
-    xl: '0.75rem',    // 12px
-    '2xl': '1rem',    // 16px
+    base: '0.375rem',  // 6px
+    md: '0.5rem',   // 8px
+    lg: '0.75rem',     // 12px
+    xl: '1rem',    // 16px
+    '2xl': '1.25rem',    // 20px
     '3xl': '1.5rem',  // 24px
     full: '9999px',
   },
@@ -370,4 +373,4 @@ export const coffeeTheme: ThemeConfig = {
   },
 };
 
-export default coffeeTheme;
+export default electricianTheme;

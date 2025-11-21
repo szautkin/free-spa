@@ -1,11 +1,11 @@
 /**
- * COFFEE SHOP ASSETS CONFIGURATION
+ * ELECTRICIAN ASSETS CONFIGURATION
  *
- * This file contains all image paths and asset references for the coffee shop application.
+ * This file contains all image paths and asset references for the electrician application.
  * Modify these paths to point to your actual images.
  *
  * All paths are relative to the public directory
- * Images should be placed in: public/assets/coffee/
+ * Images should be placed in: public/assets/electrician/
  */
 
 export interface HeroAssets {
@@ -52,8 +52,10 @@ export interface BrandAssets {
 }
 
 export interface IconAssets {
-  coffee: string;
-  food: string;
+  electrical: string;
+  residential: string;
+  commercial: string;
+  emergency: string;
   location: string;
   time: string;
   phone: string;
@@ -74,14 +76,14 @@ export interface AssetsConfig {
 }
 
 // ========================================
-// COFFEE SHOP ASSETS PATHS
+// ELECTRICIAN ASSETS PATHS
 // ========================================
 
-const ASSETS_BASE_PATH = '/assets/coffee';
+const ASSETS_BASE_PATH = '/assets/electrician';
 const IMAGES_PATH = `${ASSETS_BASE_PATH}/images`;
 const ICONS_PATH = `${ASSETS_BASE_PATH}/icons`;
 
-export const coffeeAssets: AssetsConfig = {
+export const electricianAssets: AssetsConfig = {
   // HERO SECTION
   hero: {
     backgroundImage: `${IMAGES_PATH}/hero-background.jpg`,
@@ -100,21 +102,21 @@ export const coffeeAssets: AssetsConfig = {
     ],
   },
 
-  // MENU SECTION
+  // SERVICES SECTION (using "menu" structure)
   menu: {
     categoryImages: {
-      espresso: `${IMAGES_PATH}/menu-espresso.jpg`,
-      brewed: `${IMAGES_PATH}/menu-brewed.jpg`,
-      specialty: `${IMAGES_PATH}/menu-specialty.jpg`,
-      cold: `${IMAGES_PATH}/menu-cold.jpg`,
-      food: `${IMAGES_PATH}/menu-food.jpg`,
+      residential: `${IMAGES_PATH}/services-residential.jpg`,
+      commercial: `${IMAGES_PATH}/services-commercial.jpg`,
+      emergency: `${IMAGES_PATH}/services-emergency.jpg`,
+      specialty: `${IMAGES_PATH}/services-specialty.jpg`,
     },
     itemImages: {
-      latte: `${IMAGES_PATH}/items/latte.jpg`,
-      cappuccino: `${IMAGES_PATH}/items/cappuccino.jpg`,
-      'pour-over': `${IMAGES_PATH}/items/pour-over.jpg`,
-      'cold-brew': `${IMAGES_PATH}/items/cold-brew.jpg`,
-      'avocado-toast': `${IMAGES_PATH}/items/avocado-toast.jpg`,
+      'panel-upgrade': `${IMAGES_PATH}/services/panel-upgrade.jpg`,
+      'lighting-design': `${IMAGES_PATH}/services/lighting-design.jpg`,
+      'commercial-wiring': `${IMAGES_PATH}/services/commercial-wiring.jpg`,
+      'power-outage': `${IMAGES_PATH}/services/power-outage.jpg`,
+      'ev-charging': `${IMAGES_PATH}/services/ev-charging.jpg`,
+      'safety-hazards': `${IMAGES_PATH}/services/safety-hazards.jpg`,
     },
   },
 
@@ -123,87 +125,87 @@ export const coffeeAssets: AssetsConfig = {
     images: [
       {
         id: 'gallery-1',
-        src: `${IMAGES_PATH}/gallery/coffee-1.jpg`,
-        alt: 'Freshly brewed espresso shot',
-        category: 'Coffee',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/coffee-1.jpg`,
+        src: `${IMAGES_PATH}/gallery/residential-1.jpg`,
+        alt: 'Modern electrical panel installation',
+        category: 'Residential',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/residential-1.jpg`,
       },
       {
         id: 'gallery-2',
-        src: `${IMAGES_PATH}/gallery/coffee-2.jpg`,
-        alt: 'Latte art pour',
-        category: 'Coffee',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/coffee-2.jpg`,
+        src: `${IMAGES_PATH}/gallery/residential-2.jpg`,
+        alt: 'Kitchen lighting installation',
+        category: 'Residential',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/residential-2.jpg`,
       },
       {
         id: 'gallery-3',
-        src: `${IMAGES_PATH}/gallery/coffee-3.jpg`,
-        alt: 'Cold brew on tap',
-        category: 'Coffee',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/coffee-3.jpg`,
+        src: `${IMAGES_PATH}/gallery/residential-3.jpg`,
+        alt: 'Outdoor landscape lighting',
+        category: 'Residential',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/residential-3.jpg`,
       },
       {
         id: 'gallery-4',
-        src: `${IMAGES_PATH}/gallery/interior-1.jpg`,
-        alt: 'Cozy seating area',
-        category: 'Interior',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/interior-1.jpg`,
+        src: `${IMAGES_PATH}/gallery/commercial-1.jpg`,
+        alt: 'Commercial building electrical work',
+        category: 'Commercial',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/commercial-1.jpg`,
       },
       {
         id: 'gallery-5',
-        src: `${IMAGES_PATH}/gallery/interior-2.jpg`,
-        alt: 'Coffee bar counter',
-        category: 'Interior',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/interior-2.jpg`,
+        src: `${IMAGES_PATH}/gallery/commercial-2.jpg`,
+        alt: 'Office lighting retrofit',
+        category: 'Commercial',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/commercial-2.jpg`,
       },
       {
         id: 'gallery-6',
-        src: `${IMAGES_PATH}/gallery/interior-3.jpg`,
-        alt: 'Window seating',
-        category: 'Interior',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/interior-3.jpg`,
+        src: `${IMAGES_PATH}/gallery/commercial-3.jpg`,
+        alt: 'Parking lot lighting installation',
+        category: 'Commercial',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/commercial-3.jpg`,
       },
       {
         id: 'gallery-7',
-        src: `${IMAGES_PATH}/gallery/food-1.jpg`,
-        alt: 'Fresh croissants',
-        category: 'Food',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/food-1.jpg`,
+        src: `${IMAGES_PATH}/gallery/emergency-1.jpg`,
+        alt: 'Emergency electrical repair',
+        category: 'Emergency Repairs',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/emergency-1.jpg`,
       },
       {
         id: 'gallery-8',
-        src: `${IMAGES_PATH}/gallery/food-2.jpg`,
-        alt: 'Avocado toast',
-        category: 'Food',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/food-2.jpg`,
+        src: `${IMAGES_PATH}/gallery/emergency-2.jpg`,
+        alt: 'Storm damage electrical repair',
+        category: 'Emergency Repairs',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/emergency-2.jpg`,
       },
       {
         id: 'gallery-9',
-        src: `${IMAGES_PATH}/gallery/food-3.jpg`,
-        alt: 'Pastry selection',
-        category: 'Food',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/food-3.jpg`,
+        src: `${IMAGES_PATH}/gallery/emergency-3.jpg`,
+        alt: 'After-hours emergency service',
+        category: 'Emergency Repairs',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/emergency-3.jpg`,
       },
       {
         id: 'gallery-10',
-        src: `${IMAGES_PATH}/gallery/events-1.jpg`,
-        alt: 'Coffee tasting event',
-        category: 'Events',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/events-1.jpg`,
+        src: `${IMAGES_PATH}/gallery/install-1.jpg`,
+        alt: 'EV charging station installation',
+        category: 'Installations',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/install-1.jpg`,
       },
       {
         id: 'gallery-11',
-        src: `${IMAGES_PATH}/gallery/events-2.jpg`,
-        alt: 'Latte art workshop',
-        category: 'Events',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/events-2.jpg`,
+        src: `${IMAGES_PATH}/gallery/install-2.jpg`,
+        alt: 'Backup generator installation',
+        category: 'Installations',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/install-2.jpg`,
       },
       {
         id: 'gallery-12',
-        src: `${IMAGES_PATH}/gallery/events-3.jpg`,
-        alt: 'Community gathering',
-        category: 'Events',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/events-3.jpg`,
+        src: `${IMAGES_PATH}/gallery/install-3.jpg`,
+        alt: 'Smart home system wiring',
+        category: 'Installations',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/install-3.jpg`,
       },
     ],
   },
@@ -225,8 +227,10 @@ export const coffeeAssets: AssetsConfig = {
 
   // ICON ASSETS
   icons: {
-    coffee: `${ICONS_PATH}/coffee.svg`,
-    food: `${ICONS_PATH}/food.svg`,
+    electrical: `${ICONS_PATH}/electrical.svg`,
+    residential: `${ICONS_PATH}/residential.svg`,
+    commercial: `${ICONS_PATH}/commercial.svg`,
+    emergency: `${ICONS_PATH}/emergency.svg`,
     location: `${ICONS_PATH}/location.svg`,
     time: `${ICONS_PATH}/time.svg`,
     phone: `${ICONS_PATH}/phone.svg`,
@@ -267,4 +271,4 @@ export const getImageWithFallback = (
   return hasImage(primaryPath) ? getImagePath(primaryPath) : getImagePath(fallbackPath);
 };
 
-export default coffeeAssets;
+export default electricianAssets;

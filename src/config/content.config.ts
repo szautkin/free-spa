@@ -1,7 +1,7 @@
 /**
- * COFFEE SHOP CONTENT CONFIGURATION
+ * ELECTRICIAN CONTENT CONFIGURATION
  *
- * This file contains all text content, labels, and copy for the coffee shop application.
+ * This file contains all text content, labels, and copy for the electrician application.
  * Modify these values to customize all text throughout the site.
  *
  * Supports simple string replacement for easy customization
@@ -34,26 +34,24 @@ export interface AboutContent {
   }[];
 }
 
-export interface MenuItem {
+export interface ServiceItem {
   id: string;
   name: string;
   description: string;
   price: string;
   category: string;
   featured?: boolean;
-  tags?: string[];  // e.g., 'hot', 'iced', 'vegan', 'gluten-free'
+  tags?: string[];  // e.g., 'emergency', 'residential', 'commercial'
 }
 
 export interface MenuContent {
   sectionTitle: string;
-  subtitle: string;
-  featuredTitle: string;
   categories: {
     id: string;
     name: string;
     description: string;
   }[];
-  items: MenuItem[];
+  items: ServiceItem[];
 }
 
 export interface GalleryContent {
@@ -64,8 +62,6 @@ export interface GalleryContent {
 
 export interface LocationContent {
   sectionTitle: string;
-  heading: string;
-  subtitle: string;
   address: {
     street: string;
     city: string;
@@ -92,24 +88,6 @@ export interface LocationContent {
     };
   };
   mapUrl?: string;
-  labels: {
-    address: string;
-    hours: string;
-    contact: string;
-    phone: string;
-    email: string;
-    followUs: string;
-    getDirections: string;
-    daysOfWeek: {
-      monday: string;
-      tuesday: string;
-      wednesday: string;
-      thursday: string;
-      friday: string;
-      saturday: string;
-      sunday: string;
-    };
-  };
 }
 
 export interface FooterContent {
@@ -120,10 +98,6 @@ export interface FooterContent {
     label: string;
     url: string;
   }[];
-  labels: {
-    quickLinks: string;
-    contact: string;
-  };
 }
 
 export interface SiteMetadata {
@@ -144,308 +118,252 @@ export interface ContentConfig {
 }
 
 // ========================================
-// COFFEE SHOP CONTENT
+// ELECTRICIAN CONTENT
 // ========================================
 
-export const coffeeContent: ContentConfig = {
+export const electricianContent: ContentConfig = {
   // SITE METADATA
   metadata: {
-    siteName: 'Aroma Haven Coffee',
-    siteDescription: 'Premium artisan coffee shop serving handcrafted beverages and freshly baked pastries in the heart of the city.',
-    siteUrl: 'https://aromahaven.coffee',
+    siteName: 'PowerPro Electric',
+    siteDescription: 'Your trusted local electrician serving the community with professional electrical services, emergency repairs, and installations for over 15 years.',
+    siteUrl: 'https://powerproelectric.local',
     keywords: [
-      'coffee shop',
-      'artisan coffee',
-      'specialty coffee',
-      'cafe',
-      'espresso',
-      'coffee roasters',
-      'local coffee',
+      'electrician',
+      'electrical services',
+      'local electrician',
+      'emergency electrician',
+      'residential electrician',
+      'commercial electrician',
+      'electrical repairs',
+      'electrical installation',
+      'licensed electrician',
+      'electrical contractor',
     ],
   },
 
   // HERO SECTION
   hero: {
-    title: 'Aroma Haven Coffee',
-    subtitle: 'Where Every Cup Tells a Story',
-    tagline: 'Handcrafted coffee experiences, roasted with passion, served with love',
+    title: 'PowerPro Electric',
+    subtitle: 'Your Trusted Local Electrical Experts',
+    tagline: 'Professional electrical services you can count on - licensed, insured, and committed to excellence since 2009',
     ctaButtons: {
       primary: {
-        text: 'Explore Menu',
-        link: '#menu',
+        text: 'View Services',
+        link: '#services',
       },
       secondary: {
-        text: 'Visit Us',
-        link: '#location',
+        text: 'Emergency Service',
+        link: '#contact',
       },
     },
   },
 
   // ABOUT SECTION
   about: {
-    sectionTitle: 'Our Story',
-    heading: 'Brewing Excellence Since 2018',
+    sectionTitle: 'About Us',
+    heading: 'Powering Your Community Since 2009',
     story: [
-      'At Aroma Haven, we believe that great coffee starts with great beans. We source our beans directly from sustainable farms across the globe, building relationships with farmers who share our commitment to quality and environmental stewardship.',
-      'Our master roasters bring decades of experience, carefully crafting each roast profile to highlight the unique characteristics of every origin. From the bright, fruity notes of Ethiopian Yirgacheffe to the rich, chocolatey depth of Colombian Supremo, every cup is a journey.',
-      'But coffee is more than just a beverage to us—it\'s a catalyst for connection. Our welcoming space is designed to bring people together, whether you\'re catching up with old friends, diving into a good book, or finding your creative flow.',
+      'At PowerPro Electric, we\'re more than just electricians—we\'re your neighbors. For over 15 years, we\'ve been proudly serving our local community with reliable, professional electrical services that keep homes and businesses running safely and efficiently.',
+      'What started as a one-man operation has grown into a trusted team of licensed master electricians and certified technicians. But our commitment remains the same: treat every project with the care and attention we\'d give our own home. We understand that electrical issues can be stressful, which is why we prioritize clear communication, transparent pricing, and workmanship that exceeds code requirements.',
+      'Whether it\'s an emergency repair at midnight or a planned renovation, we bring the same dedication to quality and safety. Our deep roots in this community mean your satisfaction isn\'t just good business—it\'s personal. When you choose PowerPro Electric, you\'re choosing a partner who genuinely cares about keeping your property safe and your lights on.',
     ],
     highlights: [
       {
-        title: 'Ethically Sourced',
-        description: 'Direct trade relationships with farmers for the finest beans',
+        title: 'Licensed & Insured',
+        description: 'Fully licensed master electricians with comprehensive insurance coverage',
       },
       {
-        title: 'Small Batch Roasted',
-        description: 'Roasted fresh in-house to perfection every week',
+        title: '24/7 Emergency Service',
+        description: 'Available day or night for urgent electrical emergencies',
       },
       {
-        title: 'Expert Baristas',
-        description: 'Trained craftspeople passionate about the perfect cup',
+        title: 'Local Expertise',
+        description: 'Deep knowledge of local codes and community electrical needs',
       },
       {
-        title: 'Community Focused',
-        description: 'A warm, welcoming space for everyone to gather',
+        title: 'Quality Guaranteed',
+        description: 'All work backed by our comprehensive satisfaction guarantee',
       },
     ],
   },
 
-  // MENU SECTION
+  // SERVICES SECTION (using "menu" structure from template)
   menu: {
-    sectionTitle: 'Our Menu',
-    subtitle: 'Handcrafted Beverages & Bites',
-    featuredTitle: 'Featured Favorites',
+    sectionTitle: 'Our Services',
     categories: [
       {
-        id: 'espresso',
-        name: 'Espresso Drinks',
-        description: 'Classic espresso-based beverages',
+        id: 'residential',
+        name: 'Residential Services',
+        description: 'Complete electrical solutions for your home',
       },
       {
-        id: 'brewed',
-        name: 'Brewed Coffee',
-        description: 'Pour over, drip, and specialty brews',
+        id: 'commercial',
+        name: 'Commercial Services',
+        description: 'Professional electrical work for businesses',
+      },
+      {
+        id: 'emergency',
+        name: 'Emergency Services',
+        description: 'Fast response for urgent electrical issues',
       },
       {
         id: 'specialty',
-        name: 'Specialty Drinks',
-        description: 'Unique creations and seasonal favorites',
-      },
-      {
-        id: 'cold',
-        name: 'Cold Beverages',
-        description: 'Iced and cold brew options',
-      },
-      {
-        id: 'food',
-        name: 'Food',
-        description: 'Fresh pastries and light bites',
+        name: 'Specialty Services',
+        description: 'Advanced electrical installations and upgrades',
       },
     ],
     items: [
-      // Espresso Drinks
+      // Residential Services
       {
-        id: 'espresso',
-        name: 'Espresso',
-        description: 'Rich, bold shot of our signature blend',
-        price: '$3.50',
-        category: 'espresso',
+        id: 'panel-upgrade',
+        name: 'Electrical Panel Upgrade',
+        description: 'Modernize your electrical panel for improved safety and capacity',
+        price: 'Starting at $1,200',
+        category: 'residential',
         featured: true,
-        tags: ['hot'],
+        tags: ['residential', 'upgrade'],
       },
       {
-        id: 'americano',
-        name: 'Americano',
-        description: 'Espresso diluted with hot water',
-        price: '$4.00',
-        category: 'espresso',
-        tags: ['hot'],
+        id: 'outlet-installation',
+        name: 'Outlet & Switch Installation',
+        description: 'Install new outlets, switches, and USB charging stations',
+        price: 'From $95',
+        category: 'residential',
+        tags: ['residential'],
       },
       {
-        id: 'cappuccino',
-        name: 'Cappuccino',
-        description: 'Espresso with steamed milk and foam',
-        price: '$4.75',
-        category: 'espresso',
-        tags: ['hot'],
-      },
-      {
-        id: 'latte',
-        name: 'Latte',
-        description: 'Espresso with velvety steamed milk',
-        price: '$5.00',
-        category: 'espresso',
+        id: 'lighting-design',
+        name: 'Interior & Exterior Lighting',
+        description: 'Professional lighting design and installation services',
+        price: 'Custom Quote',
+        category: 'residential',
         featured: true,
-        tags: ['hot'],
+        tags: ['residential'],
       },
       {
-        id: 'mocha',
-        name: 'Mocha',
-        description: 'Espresso with chocolate and steamed milk',
-        price: '$5.50',
-        category: 'espresso',
-        tags: ['hot'],
-      },
-      {
-        id: 'cortado',
-        name: 'Cortado',
-        description: 'Equal parts espresso and steamed milk',
-        price: '$4.50',
-        category: 'espresso',
-        tags: ['hot'],
+        id: 'home-rewiring',
+        name: 'Complete Home Rewiring',
+        description: 'Safe, code-compliant rewiring for older homes',
+        price: 'Starting at $3,500',
+        category: 'residential',
+        tags: ['residential', 'upgrade'],
       },
 
-      // Brewed Coffee
+      // Commercial Services
       {
-        id: 'drip',
-        name: 'Drip Coffee',
-        description: 'Classic filtered coffee, changes daily',
-        price: '$3.00',
-        category: 'brewed',
-        tags: ['hot'],
-      },
-      {
-        id: 'pour-over',
-        name: 'Pour Over',
-        description: 'Single-origin coffee brewed to order',
-        price: '$5.50',
-        category: 'brewed',
+        id: 'commercial-wiring',
+        name: 'Commercial Wiring',
+        description: 'New construction and tenant improvement electrical work',
+        price: 'Custom Quote',
+        category: 'commercial',
         featured: true,
-        tags: ['hot'],
+        tags: ['commercial'],
       },
       {
-        id: 'french-press',
-        name: 'French Press',
-        description: 'Full-bodied immersion brew (serves 2)',
-        price: '$7.00',
-        category: 'brewed',
-        tags: ['hot'],
+        id: 'led-retrofit',
+        name: 'LED Lighting Retrofit',
+        description: 'Energy-efficient LED upgrades for business facilities',
+        price: 'Starting at $500',
+        category: 'commercial',
+        tags: ['commercial', 'energy-efficient'],
+      },
+      {
+        id: 'maintenance-contracts',
+        name: 'Maintenance Contracts',
+        description: 'Scheduled preventive maintenance for commercial properties',
+        price: 'From $200/month',
+        category: 'commercial',
+        tags: ['commercial'],
+      },
+      {
+        id: 'parking-lighting',
+        name: 'Parking Lot Lighting',
+        description: 'Installation and repair of outdoor commercial lighting',
+        price: 'Custom Quote',
+        category: 'commercial',
+        tags: ['commercial'],
       },
 
-      // Specialty Drinks
+      // Emergency Services
       {
-        id: 'vanilla-latte',
-        name: 'Vanilla Latte',
-        description: 'Latte with house-made vanilla syrup',
-        price: '$5.50',
+        id: 'power-outage',
+        name: 'Power Outage Repairs',
+        description: 'Fast diagnosis and repair of electrical outages',
+        price: '$150 service call + repairs',
+        category: 'emergency',
+        featured: true,
+        tags: ['emergency', '24/7'],
+      },
+      {
+        id: 'electrical-fire-damage',
+        name: 'Electrical Fire & Surge Damage',
+        description: 'Emergency repairs after electrical fires or power surges',
+        price: 'Emergency Rate',
+        category: 'emergency',
+        tags: ['emergency', '24/7'],
+      },
+      {
+        id: 'safety-hazards',
+        name: 'Safety Hazard Response',
+        description: 'Immediate response to sparking outlets, burning smells, etc.',
+        price: '$150 service call + repairs',
+        category: 'emergency',
+        featured: true,
+        tags: ['emergency', '24/7'],
+      },
+
+      // Specialty Services
+      {
+        id: 'ev-charging',
+        name: 'EV Charging Station Installation',
+        description: 'Professional installation of home EV charging stations',
+        price: 'Starting at $800',
         category: 'specialty',
-        tags: ['hot'],
+        featured: true,
+        tags: ['specialty', 'eco-friendly'],
       },
       {
-        id: 'caramel-macchiato',
-        name: 'Caramel Macchiato',
-        description: 'Vanilla latte with caramel drizzle',
-        price: '$5.75',
+        id: 'generator-installation',
+        name: 'Backup Generator Installation',
+        description: 'Whole-house generator installation and service',
+        price: 'Starting at $4,500',
         category: 'specialty',
-        tags: ['hot'],
+        tags: ['specialty'],
       },
       {
-        id: 'honey-lavender',
-        name: 'Honey Lavender Latte',
-        description: 'Latte with honey and lavender',
-        price: '$6.00',
+        id: 'smart-home',
+        name: 'Smart Home Integration',
+        description: 'Electrical work for smart home automation systems',
+        price: 'Custom Quote',
         category: 'specialty',
-        featured: true,
-        tags: ['hot'],
-      },
-
-      // Cold Beverages
-      {
-        id: 'cold-brew',
-        name: 'Cold Brew',
-        description: 'Smooth, naturally sweet cold brew',
-        price: '$4.50',
-        category: 'cold',
-        featured: true,
-        tags: ['iced'],
+        tags: ['specialty', 'modern'],
       },
       {
-        id: 'iced-latte',
-        name: 'Iced Latte',
-        description: 'Espresso over ice with cold milk',
-        price: '$5.25',
-        category: 'cold',
-        tags: ['iced'],
-      },
-      {
-        id: 'nitro-cold-brew',
-        name: 'Nitro Cold Brew',
-        description: 'Cold brew infused with nitrogen',
-        price: '$5.50',
-        category: 'cold',
-        tags: ['iced'],
-      },
-      {
-        id: 'iced-mocha',
-        name: 'Iced Mocha',
-        description: 'Iced espresso with chocolate',
-        price: '$5.75',
-        category: 'cold',
-        tags: ['iced'],
-      },
-
-      // Food
-      {
-        id: 'croissant',
-        name: 'Butter Croissant',
-        description: 'Flaky, buttery French pastry',
-        price: '$4.00',
-        category: 'food',
-        tags: [],
-      },
-      {
-        id: 'chocolate-croissant',
-        name: 'Chocolate Croissant',
-        description: 'Croissant filled with dark chocolate',
-        price: '$4.50',
-        category: 'food',
-        tags: [],
-      },
-      {
-        id: 'muffin',
-        name: 'Blueberry Muffin',
-        description: 'Fresh baked with local blueberries',
-        price: '$3.50',
-        category: 'food',
-        tags: [],
-      },
-      {
-        id: 'avocado-toast',
-        name: 'Avocado Toast',
-        description: 'Smashed avocado on sourdough',
-        price: '$8.00',
-        category: 'food',
-        featured: true,
-        tags: ['vegan'],
-      },
-      {
-        id: 'bagel',
-        name: 'Bagel with Cream Cheese',
-        description: 'Fresh bagel with cream cheese',
-        price: '$5.00',
-        category: 'food',
-        tags: [],
+        id: 'solar-prep',
+        name: 'Solar Panel Electrical Prep',
+        description: 'Electrical system preparation for solar panel installation',
+        price: 'Starting at $1,500',
+        category: 'specialty',
+        tags: ['specialty', 'eco-friendly'],
       },
     ],
   },
 
   // GALLERY SECTION
   gallery: {
-    sectionTitle: 'Our Space',
-    subtitle: 'A glimpse into the Aroma Haven experience',
-    categories: ['All', 'Coffee', 'Interior', 'Food', 'Events'],
+    sectionTitle: 'Our Work',
+    subtitle: 'See the quality and professionalism we bring to every project',
+    categories: ['All', 'Residential', 'Commercial', 'Emergency Repairs', 'Installations'],
   },
 
   // LOCATION SECTION
   location: {
-    sectionTitle: 'Visit Us',
-    heading: 'Find Us Here',
-    subtitle: 'Come visit us for a warm cup and even warmer conversation',
+    sectionTitle: 'Contact Us',
     address: {
-      street: '123 Brew Street',
-      city: 'Portland',
-      state: 'OR',
-      zip: '97204',
+      street: '456 Electric Avenue',
+      city: 'Springfield',
+      state: 'IL',
+      zip: '62701',
       country: 'USA',
     },
     hours: {
@@ -453,58 +371,35 @@ export const coffeeContent: ContentConfig = {
       tuesday: '7:00 AM - 6:00 PM',
       wednesday: '7:00 AM - 6:00 PM',
       thursday: '7:00 AM - 6:00 PM',
-      friday: '7:00 AM - 8:00 PM',
-      saturday: '8:00 AM - 8:00 PM',
-      sunday: '8:00 AM - 6:00 PM',
+      friday: '7:00 AM - 6:00 PM',
+      saturday: '8:00 AM - 4:00 PM',
+      sunday: 'Emergency Service Only',
     },
     contact: {
-      phone: '(555) 123-4567',
-      email: 'hello@aromahaven.coffee',
+      phone: '(555) 789-WIRE',
+      email: 'service@powerproelectric.local',
       social: {
-        instagram: 'https://instagram.com/aromahaven',
-        facebook: 'https://facebook.com/aromahaven',
-        twitter: 'https://twitter.com/aromahaven',
+        instagram: 'https://instagram.com/powerproelectric',
+        facebook: 'https://facebook.com/powerproelectric',
       },
     },
-    mapUrl: 'https://maps.google.com/?q=123+Brew+Street+Portland+OR',
-    labels: {
-      address: 'Address',
-      hours: 'Hours',
-      contact: 'Contact',
-      phone: 'Phone',
-      email: 'Email',
-      followUs: 'Follow Us',
-      getDirections: 'Get Directions →',
-      daysOfWeek: {
-        monday: 'Monday',
-        tuesday: 'Tuesday',
-        wednesday: 'Wednesday',
-        thursday: 'Thursday',
-        friday: 'Friday',
-        saturday: 'Saturday',
-        sunday: 'Sunday',
-      },
-    },
+    mapUrl: 'https://maps.google.com/?q=456+Electric+Avenue+Springfield+IL',
   },
 
   // FOOTER
   footer: {
-    businessName: 'Aroma Haven Coffee',
-    tagline: 'Crafted with love since 2018',
-    copyright: '© 2024 Aroma Haven Coffee. All rights reserved.',
+    businessName: 'PowerPro Electric',
+    tagline: 'Powering your community since 2009',
+    copyright: '© 2024 PowerPro Electric. All rights reserved. Licensed & Insured.',
     links: [
-      { label: 'Menu', url: '#menu' },
+      { label: 'Services', url: '#services' },
       { label: 'About', url: '#about' },
-      { label: 'Location', url: '#location' },
-      { label: 'Catering', url: '#catering' },
-      { label: 'Careers', url: '#careers' },
+      { label: 'Gallery', url: '#gallery' },
+      { label: 'Contact', url: '#contact' },
+      { label: 'Emergency Service', url: '#emergency' },
       { label: 'Privacy Policy', url: '#privacy' },
     ],
-    labels: {
-      quickLinks: 'Quick Links',
-      contact: 'Contact',
-    },
   },
 };
 
-export default coffeeContent;
+export default electricianContent;
