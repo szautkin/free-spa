@@ -92,7 +92,7 @@ export interface LocationContent {
     };
   };
   mapUrl?: string;
-  labels: {
+  labels?: {
     address: string;
     hours: string;
     contact: string;
@@ -120,7 +120,7 @@ export interface FooterContent {
     label: string;
     url: string;
   }[];
-  labels: {
+  labels?: {
     quickLinks: string;
     contact: string;
   };
