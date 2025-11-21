@@ -400,6 +400,27 @@ const yogaContentBase = {
   // LOCATION SECTION
   location: {
     sectionTitle: 'Visit Us',
+    heading: 'Find Your Balance',
+    subtitle: 'Join us at our welcoming studio',
+    labels: {
+      address: 'Address',
+      hours: 'Studio Hours',
+      contact: 'Contact',
+      phone: 'Phone',
+      email: 'Email',
+      findUs: 'Find Us',
+      getDirections: 'Get Directions',
+      followUs: 'Follow Us',
+      daysOfWeek: {
+        monday: 'Monday',
+        tuesday: 'Tuesday',
+        wednesday: 'Wednesday',
+        thursday: 'Thursday',
+        friday: 'Friday',
+        saturday: 'Saturday',
+        sunday: 'Sunday',
+      },
+    },
     address: {
       street: '247 Harmony Lane',
       city: 'Boulder',
@@ -433,6 +454,11 @@ const yogaContentBase = {
     businessName: 'Serenity Flow Yoga Studio',
     tagline: 'Breathe deeply, move mindfully, live fully',
     copyright: '© 2024 Serenity Flow Yoga Studio. All rights reserved.',
+    labels: {
+      followUs: 'Follow Us',
+      quickLinks: 'Quick Links',
+      contact: 'Contact',
+    },
     links: [
       { label: 'Classes', url: '#classes' },
       { label: 'About', url: '#about' },
