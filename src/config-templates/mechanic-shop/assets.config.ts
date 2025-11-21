@@ -1,11 +1,11 @@
 /**
- * COFFEE SHOP ASSETS CONFIGURATION
+ * MECHANIC SHOP ASSETS CONFIGURATION
  *
- * This file contains all image paths and asset references for the coffee shop application.
+ * This file contains all image paths and asset references for the mechanic shop application.
  * Modify these paths to point to your actual images.
  *
  * All paths are relative to the public directory
- * Images should be placed in: public/assets/coffee/
+ * Images should be placed in: public/assets/mechanic-shop/
  */
 
 export interface HeroAssets {
@@ -93,14 +93,14 @@ export const mechanicShopAssets: AssetsConfig = {
   about: {
     mainImage: `${IMAGES_PATH}/about-main.jpg`,
     galleryImages: [
-      `${IMAGES_PATH}/about-gallery-1.jpg`,
-      `${IMAGES_PATH}/about-gallery-2.jpg`,
-      `${IMAGES_PATH}/about-gallery-3.jpg`,
-      `${IMAGES_PATH}/about-gallery-4.jpg`,
+      `${IMAGES_PATH}/about-gallery-1.jpg`,  // Shop interior
+      `${IMAGES_PATH}/about-gallery-2.jpg`,  // Team working
+      `${IMAGES_PATH}/about-gallery-3.jpg`,  // Equipment
+      `${IMAGES_PATH}/about-gallery-4.jpg`,  // Certifications
     ],
   },
 
-  // SERVICES SECTION
+  // SERVICES SECTION (Using menu structure)
   menu: {
     categoryImages: {
       maintenance: `${IMAGES_PATH}/services-maintenance.jpg`,

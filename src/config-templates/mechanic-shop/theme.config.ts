@@ -1,7 +1,7 @@
 /**
- * COFFEE SHOP THEME CONFIGURATION
+ * MECHANIC SHOP THEME CONFIGURATION
  *
- * This file contains all UI/UX settings for the coffee shop application.
+ * This file contains all UI/UX settings for the mechanic shop application.
  * Modify these values to customize the entire look and feel of the site.
  *
  * All colors support hex, rgb, rgba, hsl formats
