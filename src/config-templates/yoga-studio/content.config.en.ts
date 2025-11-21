@@ -5,7 +5,7 @@
 
 import type { ContentConfig } from './content.config';
 
-const yogaContentENBase = {
+export const yogaContentEN: ContentConfig = {
   // SITE METADATA
   metadata: {
     siteName: 'Serenity Flow Yoga Studio',
@@ -259,27 +259,6 @@ const yogaContentENBase = {
   // LOCATION SECTION
   location: {
     sectionTitle: 'Visit Us',
-    heading: 'Find Your Balance',
-    subtitle: 'Join us at our welcoming studio',
-    labels: {
-      address: 'Address',
-      hours: 'Studio Hours',
-      contact: 'Contact',
-      phone: 'Phone',
-      email: 'Email',
-      findUs: 'Find Us',
-      getDirections: 'Get Directions',
-      followUs: 'Follow Us',
-      daysOfWeek: {
-        monday: 'Monday',
-        tuesday: 'Tuesday',
-        wednesday: 'Wednesday',
-        thursday: 'Thursday',
-        friday: 'Friday',
-        saturday: 'Saturday',
-        sunday: 'Sunday',
-      },
-    },
     address: {
       street: '247 Harmony Lane',
       city: 'Boulder',
@@ -313,11 +292,6 @@ const yogaContentENBase = {
     businessName: 'Serenity Flow Yoga Studio',
     tagline: 'Breathe deeply, move mindfully, live fully',
     copyright: '© 2024 Serenity Flow Yoga Studio. All rights reserved.',
-    labels: {
-      followUs: 'Follow Us',
-      quickLinks: 'Quick Links',
-      contact: 'Contact',
-    },
     links: [
       { label: 'Classes', url: '#classes' },
       { label: 'About', url: '#about' },
@@ -330,12 +304,4 @@ const yogaContentENBase = {
   },
 };
 
-
-// Create final yoga content with menu alias for backwards compatibility
-export const yogaContentEN: ContentConfig = {
-  ...yogaContentENBase,
-  menu: yogaContentENBase.classes, // Alias classes as menu for component compatibility
-};
-
-// Also export as coffeeContentEN for backwards compatibility with existing imports
-export const coffeeContentEN = yogaContentEN;
+export default yogaContentEN;

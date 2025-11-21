@@ -377,7 +377,4 @@ export const yogaTheme: ThemeConfig = {
   },
 };
 
-// Also export as coffeeTheme for backwards compatibility with existing imports
-export const coffeeTheme = yogaTheme;
-
 export default yogaTheme;

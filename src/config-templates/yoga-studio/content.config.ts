@@ -1,11 +1,128 @@
 /**
- * ENGLISH YOGA STUDIO CONTENT CONFIGURATION
- * All text content in English for the yoga studio
+ * YOGA STUDIO CONTENT CONFIGURATION
+ *
+ * This file contains all text content, labels, and copy for the yoga studio application.
+ * Modify these values to customize all text throughout the site.
+ *
+ * Supports simple string replacement for easy customization
  */
 
-import type { ContentConfig } from './content.config';
+export interface HeroContent {
+  title: string;
+  subtitle: string;
+  tagline: string;
+  ctaButtons: {
+    primary: {
+      text: string;
+      link: string;
+    };
+    secondary?: {
+      text: string;
+      link: string;
+    };
+  };
+}
 
-const yogaContentENBase = {
+export interface AboutContent {
+  sectionTitle: string;
+  heading: string;
+  story: string[];  // Array of paragraphs
+  highlights: {
+    title: string;
+    description: string;
+    icon?: string;
+  }[];
+}
+
+export interface ClassItem {
+  id: string;
+  name: string;
+  description: string;
+  duration: string;
+  level: string;
+  category: string;
+  featured?: boolean;
+  tags?: string[];  // e.g., 'beginner', 'intermediate', 'advanced', 'all-levels'
+}
+
+export interface ClassesContent {
+  sectionTitle: string;
+  categories: {
+    id: string;
+    name: string;
+    description: string;
+  }[];
+  items: ClassItem[];
+}
+
+export interface GalleryContent {
+  sectionTitle: string;
+  subtitle: string;
+  categories: string[];
+}
+
+export interface LocationContent {
+  sectionTitle: string;
+  address: {
+    street: string;
+    city: string;
+    state: string;
+    zip: string;
+    country: string;
+  };
+  hours: {
+    monday: string;
+    tuesday: string;
+    wednesday: string;
+    thursday: string;
+    friday: string;
+    saturday: string;
+    sunday: string;
+  };
+  contact: {
+    phone: string;
+    email: string;
+    social: {
+      instagram?: string;
+      facebook?: string;
+      twitter?: string;
+    };
+  };
+  mapUrl?: string;
+}
+
+export interface FooterContent {
+  businessName: string;
+  tagline: string;
+  copyright: string;
+  links: {
+    label: string;
+    url: string;
+  }[];
+}
+
+export interface SiteMetadata {
+  siteName: string;
+  siteDescription: string;
+  siteUrl: string;
+  keywords: string[];
+}
+
+export interface ContentConfig {
+  metadata: SiteMetadata;
+  hero: HeroContent;
+  about: AboutContent;
+  classes: ClassesContent;
+  gallery: GalleryContent;
+  location: LocationContent;
+  footer: FooterContent;
+}
+
+// ========================================
+// YOGA STUDIO CONTENT
+// ========================================
+
+export const yogaContent: ContentConfig = {
   // SITE METADATA
   metadata: {
     siteName: 'Serenity Flow Yoga Studio',
@@ -259,27 +376,6 @@ const yogaContentENBase = {
   // LOCATION SECTION
   location: {
     sectionTitle: 'Visit Us',
-    heading: 'Find Your Balance',
-    subtitle: 'Join us at our welcoming studio',
-    labels: {
-      address: 'Address',
-      hours: 'Studio Hours',
-      contact: 'Contact',
-      phone: 'Phone',
-      email: 'Email',
-      findUs: 'Find Us',
-      getDirections: 'Get Directions',
-      followUs: 'Follow Us',
-      daysOfWeek: {
-        monday: 'Monday',
-        tuesday: 'Tuesday',
-        wednesday: 'Wednesday',
-        thursday: 'Thursday',
-        friday: 'Friday',
-        saturday: 'Saturday',
-        sunday: 'Sunday',
-      },
-    },
     address: {
       street: '247 Harmony Lane',
       city: 'Boulder',
@@ -313,11 +409,6 @@ const yogaContentENBase = {
     businessName: 'Serenity Flow Yoga Studio',
     tagline: 'Breathe deeply, move mindfully, live fully',
     copyright: '© 2024 Serenity Flow Yoga Studio. All rights reserved.',
-    labels: {
-      followUs: 'Follow Us',
-      quickLinks: 'Quick Links',
-      contact: 'Contact',
-    },
     links: [
       { label: 'Classes', url: '#classes' },
       { label: 'About', url: '#about' },
@@ -330,12 +421,4 @@ const yogaContentENBase = {
   },
 };
 
-
-// Create final yoga content with menu alias for backwards compatibility
-export const yogaContentEN: ContentConfig = {
-  ...yogaContentENBase,
-  menu: yogaContentENBase.classes, // Alias classes as menu for component compatibility
-};
-
-// Also export as coffeeContentEN for backwards compatibility with existing imports
-export const coffeeContentEN = yogaContentEN;
+export default yogaContent;

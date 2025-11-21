@@ -7,7 +7,7 @@
 
 import type { ContentConfig } from './content.config';
 
-const yogaContentFRBase = {
+export const yogaContentFR: ContentConfig = {
   // MÉTADONNÉES DU SITE
   metadata: {
     siteName: 'Studio de Yoga Serenity Flow',
@@ -261,27 +261,6 @@ const yogaContentFRBase = {
   // SECTION EMPLACEMENT
   location: {
     sectionTitle: 'Nous Rendre Visite',
-    heading: 'Trouvez Votre Équilibre',
-    subtitle: 'Rejoignez-nous dans notre studio accueillant',
-    labels: {
-      address: 'Adresse',
-      hours: 'Heures d\'Ouverture',
-      contact: 'Contact',
-      phone: 'Téléphone',
-      email: 'Courriel',
-      findUs: 'Nous Trouver',
-      getDirections: 'Obtenir l\'Itinéraire',
-      followUs: 'Suivez-Nous',
-      daysOfWeek: {
-        monday: 'Lundi',
-        tuesday: 'Mardi',
-        wednesday: 'Mercredi',
-        thursday: 'Jeudi',
-        friday: 'Vendredi',
-        saturday: 'Samedi',
-        sunday: 'Dimanche',
-      },
-    },
     address: {
       street: '247 Rue Harmony',
       city: 'Boulder',
@@ -315,11 +294,6 @@ const yogaContentFRBase = {
     businessName: 'Studio de Yoga Serenity Flow',
     tagline: 'Respirez profondément, bougez consciemment, vivez pleinement',
     copyright: '© 2024 Studio de Yoga Serenity Flow. Tous droits réservés.',
-    labels: {
-      followUs: 'Suivez-Nous',
-      quickLinks: 'Liens Rapides',
-      contact: 'Contact',
-    },
     links: [
       { label: 'Cours', url: '#classes' },
       { label: 'À Propos', url: '#about' },
@@ -332,12 +306,4 @@ const yogaContentFRBase = {
   },
 };
 
-
-// Create final yoga content with menu alias for backwards compatibility
-export const yogaContentFR: ContentConfig = {
-  ...yogaContentFRBase,
-  menu: yogaContentFRBase.classes, // Alias classes as menu for component compatibility
-};
-
-// Also export as coffeeContentFR for backwards compatibility with existing imports
-export const coffeeContentFR = yogaContentFR;
+export default yogaContentFR;
