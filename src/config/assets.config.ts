@@ -1,11 +1,11 @@
 /**
- * COFFEE SHOP ASSETS CONFIGURATION
+ * YOGA STUDIO ASSETS CONFIGURATION
  *
- * This file contains all image paths and asset references for the coffee shop application.
+ * This file contains all image paths and asset references for the yoga studio application.
  * Modify these paths to point to your actual images.
  *
  * All paths are relative to the public directory
- * Images should be placed in: public/assets/coffee/
+ * Images should be placed in: public/assets/yoga/
  */
 
 export interface HeroAssets {
@@ -19,7 +19,7 @@ export interface AboutAssets {
   galleryImages: string[];
 }
 
-export interface MenuAssets {
+export interface ClassesAssets {
   categoryImages: {
     [key: string]: string;
   };
@@ -40,7 +40,7 @@ export interface GalleryAssets {
 
 export interface LocationAssets {
   mapImage?: string;
-  storeFrontImage?: string;
+  studioFrontImage?: string;
 }
 
 export interface BrandAssets {
@@ -52,8 +52,8 @@ export interface BrandAssets {
 }
 
 export interface IconAssets {
-  coffee: string;
-  food: string;
+  yoga: string;
+  meditation: string;
   location: string;
   time: string;
   phone: string;
@@ -66,7 +66,7 @@ export interface IconAssets {
 export interface AssetsConfig {
   hero: HeroAssets;
   about: AboutAssets;
-  menu: MenuAssets;
+  classes: ClassesAssets;
   gallery: GalleryAssets;
   location: LocationAssets;
   brand: BrandAssets;
@@ -74,14 +74,14 @@ export interface AssetsConfig {
 }
 
 // ========================================
-// COFFEE SHOP ASSETS PATHS
+// YOGA STUDIO ASSETS PATHS
 // ========================================
 
-const ASSETS_BASE_PATH = '/assets/coffee';
+const ASSETS_BASE_PATH = '/assets/yoga';
 const IMAGES_PATH = `${ASSETS_BASE_PATH}/images`;
 const ICONS_PATH = `${ASSETS_BASE_PATH}/icons`;
 
-export const coffeeAssets: AssetsConfig = {
+export const yogaAssets: AssetsConfig = {
   // HERO SECTION
   hero: {
     backgroundImage: `${IMAGES_PATH}/hero-background.jpg`,
@@ -100,21 +100,23 @@ export const coffeeAssets: AssetsConfig = {
     ],
   },
 
-  // MENU SECTION
-  menu: {
+  // CLASSES SECTION
+  classes: {
     categoryImages: {
-      espresso: `${IMAGES_PATH}/menu-espresso.jpg`,
-      brewed: `${IMAGES_PATH}/menu-brewed.jpg`,
-      specialty: `${IMAGES_PATH}/menu-specialty.jpg`,
-      cold: `${IMAGES_PATH}/menu-cold.jpg`,
-      food: `${IMAGES_PATH}/menu-food.jpg`,
+      flow: `${IMAGES_PATH}/classes-flow.jpg`,
+      restorative: `${IMAGES_PATH}/classes-restorative.jpg`,
+      mindfulness: `${IMAGES_PATH}/classes-mindfulness.jpg`,
+      specialty: `${IMAGES_PATH}/classes-specialty.jpg`,
     },
     itemImages: {
-      latte: `${IMAGES_PATH}/items/latte.jpg`,
-      cappuccino: `${IMAGES_PATH}/items/cappuccino.jpg`,
-      'pour-over': `${IMAGES_PATH}/items/pour-over.jpg`,
-      'cold-brew': `${IMAGES_PATH}/items/cold-brew.jpg`,
-      'avocado-toast': `${IMAGES_PATH}/items/avocado-toast.jpg`,
+      'vinyasa-flow': `${IMAGES_PATH}/classes/vinyasa-flow.jpg`,
+      'power-yoga': `${IMAGES_PATH}/classes/power-yoga.jpg`,
+      'hatha-fundamentals': `${IMAGES_PATH}/classes/hatha-fundamentals.jpg`,
+      'yin-yoga': `${IMAGES_PATH}/classes/yin-yoga.jpg`,
+      'restorative': `${IMAGES_PATH}/classes/restorative.jpg`,
+      'yoga-nidra': `${IMAGES_PATH}/classes/yoga-nidra.jpg`,
+      'pranayama': `${IMAGES_PATH}/classes/pranayama.jpg`,
+      'sound-healing': `${IMAGES_PATH}/classes/sound-healing.jpg`,
     },
   },
 
@@ -123,87 +125,87 @@ export const coffeeAssets: AssetsConfig = {
     images: [
       {
         id: 'gallery-1',
-        src: `${IMAGES_PATH}/gallery/coffee-1.jpg`,
-        alt: 'Freshly brewed espresso shot',
-        category: 'Coffee',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/coffee-1.jpg`,
+        src: `${IMAGES_PATH}/gallery/studio-main.jpg`,
+        alt: 'Main yoga studio space with natural light',
+        category: 'Studio',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/studio-main.jpg`,
       },
       {
         id: 'gallery-2',
-        src: `${IMAGES_PATH}/gallery/coffee-2.jpg`,
-        alt: 'Latte art pour',
-        category: 'Coffee',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/coffee-2.jpg`,
+        src: `${IMAGES_PATH}/gallery/studio-props.jpg`,
+        alt: 'Yoga props and equipment',
+        category: 'Studio',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/studio-props.jpg`,
       },
       {
         id: 'gallery-3',
-        src: `${IMAGES_PATH}/gallery/coffee-3.jpg`,
-        alt: 'Cold brew on tap',
-        category: 'Coffee',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/coffee-3.jpg`,
+        src: `${IMAGES_PATH}/gallery/studio-meditation.jpg`,
+        alt: 'Meditation corner with cushions',
+        category: 'Studio',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/studio-meditation.jpg`,
       },
       {
         id: 'gallery-4',
-        src: `${IMAGES_PATH}/gallery/interior-1.jpg`,
-        alt: 'Cozy seating area',
-        category: 'Interior',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/interior-1.jpg`,
+        src: `${IMAGES_PATH}/gallery/class-vinyasa.jpg`,
+        alt: 'Students in vinyasa flow class',
+        category: 'Classes',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/class-vinyasa.jpg`,
       },
       {
         id: 'gallery-5',
-        src: `${IMAGES_PATH}/gallery/interior-2.jpg`,
-        alt: 'Coffee bar counter',
-        category: 'Interior',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/interior-2.jpg`,
+        src: `${IMAGES_PATH}/gallery/class-meditation.jpg`,
+        alt: 'Meditation class in session',
+        category: 'Classes',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/class-meditation.jpg`,
       },
       {
         id: 'gallery-6',
-        src: `${IMAGES_PATH}/gallery/interior-3.jpg`,
-        alt: 'Window seating',
-        category: 'Interior',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/interior-3.jpg`,
+        src: `${IMAGES_PATH}/gallery/class-restorative.jpg`,
+        alt: 'Restorative yoga with props',
+        category: 'Classes',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/class-restorative.jpg`,
       },
       {
         id: 'gallery-7',
-        src: `${IMAGES_PATH}/gallery/food-1.jpg`,
-        alt: 'Fresh croissants',
-        category: 'Food',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/food-1.jpg`,
+        src: `${IMAGES_PATH}/gallery/community-1.jpg`,
+        alt: 'Yoga community gathering',
+        category: 'Community',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/community-1.jpg`,
       },
       {
         id: 'gallery-8',
-        src: `${IMAGES_PATH}/gallery/food-2.jpg`,
-        alt: 'Avocado toast',
-        category: 'Food',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/food-2.jpg`,
+        src: `${IMAGES_PATH}/gallery/community-2.jpg`,
+        alt: 'Students connecting after class',
+        category: 'Community',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/community-2.jpg`,
       },
       {
         id: 'gallery-9',
-        src: `${IMAGES_PATH}/gallery/food-3.jpg`,
-        alt: 'Pastry selection',
-        category: 'Food',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/food-3.jpg`,
+        src: `${IMAGES_PATH}/gallery/community-3.jpg`,
+        alt: 'Tea and conversation area',
+        category: 'Community',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/community-3.jpg`,
       },
       {
         id: 'gallery-10',
-        src: `${IMAGES_PATH}/gallery/events-1.jpg`,
-        alt: 'Coffee tasting event',
-        category: 'Events',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/events-1.jpg`,
+        src: `${IMAGES_PATH}/gallery/workshop-1.jpg`,
+        alt: 'Yoga philosophy workshop',
+        category: 'Workshops',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/workshop-1.jpg`,
       },
       {
         id: 'gallery-11',
-        src: `${IMAGES_PATH}/gallery/events-2.jpg`,
-        alt: 'Latte art workshop',
-        category: 'Events',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/events-2.jpg`,
+        src: `${IMAGES_PATH}/gallery/workshop-2.jpg`,
+        alt: 'Sound healing workshop',
+        category: 'Workshops',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/workshop-2.jpg`,
       },
       {
         id: 'gallery-12',
-        src: `${IMAGES_PATH}/gallery/events-3.jpg`,
-        alt: 'Community gathering',
-        category: 'Events',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/events-3.jpg`,
+        src: `${IMAGES_PATH}/gallery/workshop-3.jpg`,
+        alt: 'Advanced practice workshop',
+        category: 'Workshops',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/workshop-3.jpg`,
       },
     ],
   },
@@ -211,7 +213,7 @@ export const coffeeAssets: AssetsConfig = {
   // LOCATION SECTION
   location: {
     mapImage: `${IMAGES_PATH}/location-map.jpg`,
-    storeFrontImage: `${IMAGES_PATH}/storefront.jpg`,
+    studioFrontImage: `${IMAGES_PATH}/studio-front.jpg`,
   },
 
   // BRAND ASSETS
@@ -225,8 +227,8 @@ export const coffeeAssets: AssetsConfig = {
 
   // ICON ASSETS
   icons: {
-    coffee: `${ICONS_PATH}/coffee.svg`,
-    food: `${ICONS_PATH}/food.svg`,
+    yoga: `${ICONS_PATH}/yoga.svg`,
+    meditation: `${ICONS_PATH}/meditation.svg`,
     location: `${ICONS_PATH}/location.svg`,
     time: `${ICONS_PATH}/time.svg`,
     phone: `${ICONS_PATH}/phone.svg`,
@@ -267,4 +269,7 @@ export const getImageWithFallback = (
   return hasImage(primaryPath) ? getImagePath(primaryPath) : getImagePath(fallbackPath);
 };
 
-export default coffeeAssets;
+// Also export as coffeeAssets for backwards compatibility with existing imports
+export const coffeeAssets = yogaAssets;
+
+export default yogaAssets;

@@ -1,7 +1,7 @@
 /**
- * COFFEE SHOP THEME CONFIGURATION
+ * YOGA STUDIO THEME CONFIGURATION
  *
- * This file contains all UI/UX settings for the coffee shop application.
+ * This file contains all UI/UX settings for the yoga studio application.
  * Modify these values to customize the entire look and feel of the site.
  *
  * All colors support hex, rgb, rgba, hsl formats
@@ -203,48 +203,50 @@ export interface ThemeConfig {
 }
 
 // ========================================
-// COFFEE SHOP THEME CONFIGURATION
+// YOGA STUDIO THEME CONFIGURATION
 // ========================================
 
-export const coffeeTheme: ThemeConfig = {
+export const yogaTheme: ThemeConfig = {
   // COLORS
+  // Customize: Calming greenish tones with warm beige for natural, peaceful yoga atmosphere
   colors: {
     primary: {
-      main: '#6F4E37',        // Rich coffee brown
-      light: '#8B6F47',       // Light mocha
-      dark: '#4A3225',        // Dark espresso
+      main: '#6B8E6F',        // Sage green - calming and natural
+      light: '#8FA892',       // Light sage
+      dark: '#4A6B4D',        // Deep forest green
       contrastText: '#FFFFFF',
     },
     secondary: {
-      main: '#D4A574',        // Warm caramel
-      light: '#E8C9A0',       // Light cream
-      dark: '#B8935F',        // Deep caramel
-      contrastText: '#2C2013',
+      main: '#D4C5B0',        // Warm beige - earthy and grounding
+      light: '#E8DED0',       // Light cream
+      dark: '#B8A890',        // Deep sand
+      contrastText: '#2C2A25',
     },
     background: {
-      default: '#FFF9F5',     // Soft cream white
+      default: '#F9F7F4',     // Soft natural white
       paper: '#FFFFFF',       // Pure white
-      dark: '#2C2013',        // Dark coffee
-      light: '#F5EFE7',       // Light beige
+      dark: '#2C3E2F',        // Deep forest
+      light: '#EAE7E0',       // Light warm gray
     },
     text: {
-      primary: '#2C2013',     // Dark brown
-      secondary: '#5C4A3A',   // Medium brown
-      disabled: '#A89585',    // Light brown
-      hint: '#C4B5A0',        // Very light brown
+      primary: '#2C2A25',     // Deep earth brown
+      secondary: '#5C5A52',   // Medium gray-brown
+      disabled: '#9B9A91',    // Light gray
+      hint: '#C4C3BA',        // Very light gray
     },
-    success: '#52B788',       // Fresh green (for fresh/organic indicators)
-    warning: '#F77F00',       // Warm orange
-    error: '#D00000',         // Red
-    info: '#6B89AF',          // Muted blue
+    success: '#7CAE7A',       // Fresh leaf green
+    warning: '#D4A574',       // Warm amber
+    error: '#C65D5D',         // Soft terracotta
+    info: '#8FA8B8',          // Calm sky blue
   },
 
   // TYPOGRAPHY
+  // Customize: Clean, modern fonts that evoke calm and clarity
   typography: {
     fontFamily: {
       primary: "'Inter', 'Helvetica Neue', Arial, sans-serif",
-      heading: "'Playfair Display', 'Georgia', serif",
-      accent: "'Dancing Script', cursive",
+      heading: "'Cormorant Garamond', 'Georgia', serif",
+      accent: "'Lora', 'Georgia', serif",
       mono: "'JetBrains Mono', 'Courier New', monospace",
     },
     fontSize: {
@@ -283,6 +285,7 @@ export const coffeeTheme: ThemeConfig = {
   },
 
   // SPACING
+  // Usually no need to modify these - they provide good defaults
   spacing: {
     unit: 8,  // Base unit: 8px
     xs: '0.5rem',   // 8px
@@ -316,19 +319,21 @@ export const coffeeTheme: ThemeConfig = {
   },
 
   // BORDER RADIUS
+  // Customize: Softer, more organic curves for peaceful yoga aesthetic
   borderRadius: {
     none: '0',
     sm: '0.125rem',   // 2px
-    base: '0.25rem',  // 4px
-    md: '0.375rem',   // 6px
-    lg: '0.5rem',     // 8px
-    xl: '0.75rem',    // 12px
-    '2xl': '1rem',    // 16px
-    '3xl': '1.5rem',  // 24px
+    base: '0.375rem',  // 6px - slightly more rounded
+    md: '0.5rem',   // 8px
+    lg: '0.75rem',     // 12px
+    xl: '1rem',    // 16px
+    '2xl': '1.5rem',    // 24px
+    '3xl': '2rem',  // 32px
     full: '9999px',
   },
 
   // SHADOWS
+  // Usually no need to modify - provides depth hierarchy
   shadows: {
     none: 'none',
     sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
@@ -341,13 +346,14 @@ export const coffeeTheme: ThemeConfig = {
   },
 
   // ANIMATIONS
+  // Slower, more mindful transitions for yoga studio feel
   animations: {
     duration: {
-      fastest: 150,   // 150ms
-      fast: 250,      // 250ms
-      normal: 350,    // 350ms
-      slow: 500,      // 500ms
-      slowest: 700,   // 700ms
+      fastest: 200,   // 200ms - slightly slower for calm feel
+      fast: 300,      // 300ms
+      normal: 400,    // 400ms
+      slow: 600,      // 600ms
+      slowest: 800,   // 800ms
     },
     easing: {
       linear: 'linear',
@@ -360,6 +366,7 @@ export const coffeeTheme: ThemeConfig = {
   },
 
   // BREAKPOINTS
+  // Usually no need to modify - standard responsive breakpoints
   breakpoints: {
     xs: '475px',
     sm: '640px',
@@ -370,4 +377,7 @@ export const coffeeTheme: ThemeConfig = {
   },
 };
 
-export default coffeeTheme;
+// Also export as coffeeTheme for backwards compatibility with existing imports
+export const coffeeTheme = yogaTheme;
+
+export default yogaTheme;
