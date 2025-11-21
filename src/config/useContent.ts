@@ -5,8 +5,8 @@
 
 import { useMemo } from 'react';
 import { useTranslation } from '../i18n/useTranslation';
-import { coffeeContentEN } from './content.config.en';
-import { coffeeContentFR } from './content.config.fr';
+import { electricianContentEN } from './content.config.en';
+import { electricianContentFR } from './content.config.fr';
 import type { ContentConfig } from './content.config';
 
 /**
@@ -17,7 +17,7 @@ export const useContent = (): ContentConfig => {
   const { language } = useTranslation();
 
   const content = useMemo(() => {
-    return language === 'fr' ? coffeeContentFR : coffeeContentEN;
+    return language === 'fr' ? electricianContentFR : electricianContentEN;
   }, [language]);
 
   return content;

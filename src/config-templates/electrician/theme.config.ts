@@ -285,6 +285,7 @@ export const electricianTheme: ThemeConfig = {
   },
 
   // SPACING
+  // Usually no need to modify these - they provide good defaults
   spacing: {
     unit: 8,  // Base unit: 8px
     xs: '0.5rem',   // 8px
@@ -332,6 +333,7 @@ export const electricianTheme: ThemeConfig = {
   },
 
   // SHADOWS
+  // Usually no need to modify - provides depth hierarchy
   shadows: {
     none: 'none',
     sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
@@ -344,6 +346,7 @@ export const electricianTheme: ThemeConfig = {
   },
 
   // ANIMATIONS
+  // Usually no need to modify - provides good UX timing
   animations: {
     duration: {
       fastest: 150,   // 150ms
@@ -363,6 +366,7 @@ export const electricianTheme: ThemeConfig = {
   },
 
   // BREAKPOINTS
+  // Usually no need to modify - standard responsive breakpoints
   breakpoints: {
     xs: '475px',
     sm: '640px',

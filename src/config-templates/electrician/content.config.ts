@@ -34,27 +34,24 @@ export interface AboutContent {
   }[];
 }
 
-
-export interface MenuItem {
+export interface ServiceItem {
   id: string;
   name: string;
   description: string;
   price: string;
   category: string;
   featured?: boolean;
-  tags?: string[];
+  tags?: string[];  // e.g., 'emergency', 'residential', 'commercial'
 }
 
 export interface MenuContent {
   sectionTitle: string;
-  subtitle: string;
-  featuredTitle: string;
   categories: {
     id: string;
     name: string;
     description: string;
   }[];
-  items: MenuItem[];
+  items: ServiceItem[];
 }
 
 export interface GalleryContent {
@@ -65,8 +62,6 @@ export interface GalleryContent {
 
 export interface LocationContent {
   sectionTitle: string;
-  heading: string;
-  subtitle: string;
   address: {
     street: string;
     city: string;
@@ -93,24 +88,6 @@ export interface LocationContent {
     };
   };
   mapUrl?: string;
-  labels: {
-    address: string;
-    hours: string;
-    contact: string;
-    phone: string;
-    email: string;
-    followUs: string;
-    getDirections: string;
-    daysOfWeek: {
-      monday: string;
-      tuesday: string;
-      wednesday: string;
-      thursday: string;
-      friday: string;
-      saturday: string;
-      sunday: string;
-    };
-  };
 }
 
 export interface FooterContent {
@@ -121,10 +98,6 @@ export interface FooterContent {
     label: string;
     url: string;
   }[];
-  labels: {
-    quickLinks: string;
-    contact: string;
-  };
 }
 
 export interface SiteMetadata {
@@ -217,8 +190,6 @@ export const electricianContent: ContentConfig = {
   // SERVICES SECTION (using "menu" structure from template)
   menu: {
     sectionTitle: 'Our Services',
-    subtitle: 'Professional Electrical Solutions',
-    featuredTitle: 'Popular Services',
     categories: [
       {
         id: 'residential',
@@ -388,8 +359,6 @@ export const electricianContent: ContentConfig = {
   // LOCATION SECTION
   location: {
     sectionTitle: 'Contact Us',
-    heading: 'Get In Touch',
-    subtitle: 'We\'re here to help with all your electrical needs',
     address: {
       street: '456 Electric Avenue',
       city: 'Springfield',
@@ -415,24 +384,6 @@ export const electricianContent: ContentConfig = {
       },
     },
     mapUrl: 'https://maps.google.com/?q=456+Electric+Avenue+Springfield+IL',
-    labels: {
-      address: 'Address',
-      hours: 'Hours',
-      contact: 'Contact',
-      phone: 'Phone',
-      email: 'Email',
-      followUs: 'Follow Us',
-      getDirections: 'Get Directions →',
-      daysOfWeek: {
-        monday: 'Monday',
-        tuesday: 'Tuesday',
-        wednesday: 'Wednesday',
-        thursday: 'Thursday',
-        friday: 'Friday',
-        saturday: 'Saturday',
-        sunday: 'Sunday',
-      },
-    },
   },
 
   // FOOTER
@@ -448,10 +399,6 @@ export const electricianContent: ContentConfig = {
       { label: 'Emergency Service', url: '#emergency' },
       { label: 'Privacy Policy', url: '#privacy' },
     ],
-    labels: {
-      quickLinks: 'Quick Links',
-      contact: 'Contact',
-    },
   },
 };
 

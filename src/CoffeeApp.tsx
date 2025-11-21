@@ -1,110 +1,110 @@
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import CoffeeShopApp from './coffee-shop/CoffeeShopApp';
-import { coffeeTheme } from './config';
+import appTheme from './config';
 import { LanguageProvider } from './i18n/LanguageContext';
 
 /**
- * Coffee Shop Application Entry Point
+ * Application Entry Point
  *
- * This component sets up the Material-UI theme based on the coffee shop
- * configuration and renders the main CoffeeShopApp component.
+ * This component sets up the Material-UI theme based on the
+ * configuration and renders the main app component.
  */
 const CoffeeApp = () => {
-  // Create MUI theme from coffee shop configuration
+  // Create MUI theme from configuration
   const muiTheme = createTheme({
     palette: {
       primary: {
-        main: coffeeTheme.colors.primary.main,
-        light: coffeeTheme.colors.primary.light,
-        dark: coffeeTheme.colors.primary.dark,
-        contrastText: coffeeTheme.colors.primary.contrastText,
+        main: appTheme.colors.primary.main,
+        light: appTheme.colors.primary.light,
+        dark: appTheme.colors.primary.dark,
+        contrastText: appTheme.colors.primary.contrastText,
       },
       secondary: {
-        main: coffeeTheme.colors.secondary.main,
-        light: coffeeTheme.colors.secondary.light,
-        dark: coffeeTheme.colors.secondary.dark,
-        contrastText: coffeeTheme.colors.secondary.contrastText,
+        main: appTheme.colors.secondary.main,
+        light: appTheme.colors.secondary.light,
+        dark: appTheme.colors.secondary.dark,
+        contrastText: appTheme.colors.secondary.contrastText,
       },
       background: {
-        default: coffeeTheme.colors.background.default,
-        paper: coffeeTheme.colors.background.paper,
+        default: appTheme.colors.background.default,
+        paper: appTheme.colors.background.paper,
       },
       text: {
-        primary: coffeeTheme.colors.text.primary,
-        secondary: coffeeTheme.colors.text.secondary,
-        disabled: coffeeTheme.colors.text.disabled,
+        primary: appTheme.colors.text.primary,
+        secondary: appTheme.colors.text.secondary,
+        disabled: appTheme.colors.text.disabled,
       },
       success: {
-        main: coffeeTheme.colors.success,
+        main: appTheme.colors.success,
       },
       warning: {
-        main: coffeeTheme.colors.warning,
+        main: appTheme.colors.warning,
       },
       error: {
-        main: coffeeTheme.colors.error,
+        main: appTheme.colors.error,
       },
       info: {
-        main: coffeeTheme.colors.info,
+        main: appTheme.colors.info,
       },
     },
     typography: {
-      fontFamily: coffeeTheme.typography.fontFamily.primary,
+      fontFamily: appTheme.typography.fontFamily.primary,
       h1: {
-        fontFamily: coffeeTheme.typography.fontFamily.heading,
+        fontFamily: appTheme.typography.fontFamily.heading,
       },
       h2: {
-        fontFamily: coffeeTheme.typography.fontFamily.heading,
+        fontFamily: appTheme.typography.fontFamily.heading,
       },
       h3: {
-        fontFamily: coffeeTheme.typography.fontFamily.heading,
+        fontFamily: appTheme.typography.fontFamily.heading,
       },
       h4: {
-        fontFamily: coffeeTheme.typography.fontFamily.heading,
+        fontFamily: appTheme.typography.fontFamily.heading,
       },
       h5: {
-        fontFamily: coffeeTheme.typography.fontFamily.heading,
+        fontFamily: appTheme.typography.fontFamily.heading,
       },
       h6: {
-        fontFamily: coffeeTheme.typography.fontFamily.heading,
+        fontFamily: appTheme.typography.fontFamily.heading,
       },
     },
     shape: {
-      borderRadius: parseInt(coffeeTheme.borderRadius.base),
+      borderRadius: parseInt(appTheme.borderRadius.base),
     },
     shadows: [
       'none',
-      coffeeTheme.shadows.sm,
-      coffeeTheme.shadows.base,
-      coffeeTheme.shadows.md,
-      coffeeTheme.shadows.lg,
-      coffeeTheme.shadows.xl,
-      coffeeTheme.shadows['2xl'],
-      coffeeTheme.shadows['2xl'],
-      coffeeTheme.shadows['2xl'],
-      coffeeTheme.shadows['2xl'],
-      coffeeTheme.shadows['2xl'],
-      coffeeTheme.shadows['2xl'],
-      coffeeTheme.shadows['2xl'],
-      coffeeTheme.shadows['2xl'],
-      coffeeTheme.shadows['2xl'],
-      coffeeTheme.shadows['2xl'],
-      coffeeTheme.shadows['2xl'],
-      coffeeTheme.shadows['2xl'],
-      coffeeTheme.shadows['2xl'],
-      coffeeTheme.shadows['2xl'],
-      coffeeTheme.shadows['2xl'],
-      coffeeTheme.shadows['2xl'],
-      coffeeTheme.shadows['2xl'],
-      coffeeTheme.shadows['2xl'],
-      coffeeTheme.shadows['2xl'],
+      appTheme.shadows.sm,
+      appTheme.shadows.base,
+      appTheme.shadows.md,
+      appTheme.shadows.lg,
+      appTheme.shadows.xl,
+      appTheme.shadows['2xl'],
+      appTheme.shadows['2xl'],
+      appTheme.shadows['2xl'],
+      appTheme.shadows['2xl'],
+      appTheme.shadows['2xl'],
+      appTheme.shadows['2xl'],
+      appTheme.shadows['2xl'],
+      appTheme.shadows['2xl'],
+      appTheme.shadows['2xl'],
+      appTheme.shadows['2xl'],
+      appTheme.shadows['2xl'],
+      appTheme.shadows['2xl'],
+      appTheme.shadows['2xl'],
+      appTheme.shadows['2xl'],
+      appTheme.shadows['2xl'],
+      appTheme.shadows['2xl'],
+      appTheme.shadows['2xl'],
+      appTheme.shadows['2xl'],
+      appTheme.shadows['2xl'],
     ],
     breakpoints: {
       values: {
-        xs: parseInt(coffeeTheme.breakpoints.xs),
-        sm: parseInt(coffeeTheme.breakpoints.sm),
-        md: parseInt(coffeeTheme.breakpoints.md),
-        lg: parseInt(coffeeTheme.breakpoints.lg),
-        xl: parseInt(coffeeTheme.breakpoints.xl),
+        xs: parseInt(appTheme.breakpoints.xs),
+        sm: parseInt(appTheme.breakpoints.sm),
+        md: parseInt(appTheme.breakpoints.md),
+        lg: parseInt(appTheme.breakpoints.lg),
+        xl: parseInt(appTheme.breakpoints.xl),
       },
     },
   });
