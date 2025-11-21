@@ -203,49 +203,49 @@ export interface ThemeConfig {
 }
 
 // ========================================
-// COFFEE SHOP THEME CONFIGURATION
+// MECHANIC SHOP THEME CONFIGURATION
 // ========================================
 
-export const coffeeTheme: ThemeConfig = {
+export const mechanicShopTheme: ThemeConfig = {
   // COLORS
   colors: {
     primary: {
-      main: '#6F4E37',        // Rich coffee brown
-      light: '#8B6F47',       // Light mocha
-      dark: '#4A3225',        // Dark espresso
+      main: '#1E40AF',        // Bold professional blue
+      light: '#3B82F6',       // Light blue
+      dark: '#1E3A8A',        // Dark navy blue
       contrastText: '#FFFFFF',
     },
     secondary: {
-      main: '#D4A574',        // Warm caramel
-      light: '#E8C9A0',       // Light cream
-      dark: '#B8935F',        // Deep caramel
-      contrastText: '#2C2013',
+      main: '#F97316',        // Safety orange (like warning lights)
+      light: '#FB923C',       // Light orange
+      dark: '#EA580C',        // Deep orange
+      contrastText: '#FFFFFF',
     },
     background: {
-      default: '#FFF9F5',     // Soft cream white
+      default: '#F8FAFC',     // Clean light gray
       paper: '#FFFFFF',       // Pure white
-      dark: '#2C2013',        // Dark coffee
-      light: '#F5EFE7',       // Light beige
+      dark: '#1E293B',        // Dark slate
+      light: '#F1F5F9',       // Very light slate
     },
     text: {
-      primary: '#2C2013',     // Dark brown
-      secondary: '#5C4A3A',   // Medium brown
-      disabled: '#A89585',    // Light brown
-      hint: '#C4B5A0',        // Very light brown
+      primary: '#0F172A',     // Dark slate
+      secondary: '#475569',   // Medium slate
+      disabled: '#94A3B8',    // Light slate
+      hint: '#CBD5E1',        // Very light slate
     },
-    success: '#52B788',       // Fresh green (for fresh/organic indicators)
-    warning: '#F77F00',       // Warm orange
-    error: '#D00000',         // Red
-    info: '#6B89AF',          // Muted blue
+    success: '#10B981',       // Green (service complete)
+    warning: '#F59E0B',       // Amber (maintenance due)
+    error: '#EF4444',         // Red (critical issue)
+    info: '#3B82F6',          // Blue (information)
   },
 
   // TYPOGRAPHY
   typography: {
     fontFamily: {
-      primary: "'Inter', 'Helvetica Neue', Arial, sans-serif",
-      heading: "'Playfair Display', 'Georgia', serif",
-      accent: "'Dancing Script', cursive",
-      mono: "'JetBrains Mono', 'Courier New', monospace",
+      primary: "'Roboto', 'Helvetica Neue', Arial, sans-serif",
+      heading: "'Montserrat', 'Arial Black', sans-serif",
+      accent: "'Oswald', 'Impact', sans-serif",
+      mono: "'Roboto Mono', 'Courier New', monospace",
     },
     fontSize: {
       xs: '0.75rem',      // 12px
@@ -370,4 +370,4 @@ export const coffeeTheme: ThemeConfig = {
   },
 };
 
-export default coffeeTheme;
+export default mechanicShopTheme;

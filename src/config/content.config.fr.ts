@@ -1,39 +1,178 @@
 /**
- * CONFIGURATION DE CONTENU EN FRANÇAIS
- * Tout le contenu textuel en français
+ * CONFIGURATION DE CONTENU FRANÇAIS POUR L'ATELIER MÉCANIQUE
+ * Tout le contenu textuel en français pour le modèle d'atelier mécanique
  */
 
-import type { ContentConfig } from './content.config';
+export interface HeroContent {
+  title: string;
+  subtitle: string;
+  tagline: string;
+  ctaButtons: {
+    primary: {
+      text: string;
+      link: string;
+    };
+    secondary?: {
+      text: string;
+      link: string;
+    };
+  };
+}
 
-export const coffeeContentFR: ContentConfig = {
+export interface AboutContent {
+  sectionTitle: string;
+  heading: string;
+  story: string[];  // Array of paragraphs
+  highlights: {
+    title: string;
+    description: string;
+    icon?: string;
+  }[];
+}
+
+export interface MenuItem {
+  id: string;
+  name: string;
+  description: string;
+  price: string;
+  category: string;
+  featured?: boolean;
+  tags?: string[];
+}
+
+export interface MenuContent {
+  sectionTitle: string;
+  subtitle: string;
+  featuredTitle: string;
+  categories: {
+    id: string;
+    name: string;
+    description: string;
+  }[];
+  items: MenuItem[];
+}
+
+export interface GalleryContent {
+  sectionTitle: string;
+  subtitle: string;
+  categories: string[];
+}
+
+export interface LocationContent {
+  sectionTitle: string;
+  heading: string;
+  subtitle: string;
+  address: {
+    street: string;
+    city: string;
+    state: string;
+    zip: string;
+    country: string;
+  };
+  hours: {
+    monday: string;
+    tuesday: string;
+    wednesday: string;
+    thursday: string;
+    friday: string;
+    saturday: string;
+    sunday: string;
+  };
+  contact: {
+    phone: string;
+    email: string;
+    social: {
+      instagram?: string;
+      facebook?: string;
+      twitter?: string;
+    };
+  };
+  mapUrl?: string;
+  labels: {
+    address: string;
+    hours: string;
+    contact: string;
+    phone: string;
+    email: string;
+    followUs: string;
+    getDirections: string;
+    daysOfWeek: {
+      monday: string;
+      tuesday: string;
+      wednesday: string;
+      thursday: string;
+      friday: string;
+      saturday: string;
+      sunday: string;
+    };
+  };
+}
+
+export interface FooterContent {
+  businessName: string;
+  tagline: string;
+  copyright: string;
+  links: {
+    label: string;
+    url: string;
+  }[];
+  labels: {
+    quickLinks: string;
+    contact: string;
+  };
+}
+
+export interface SiteMetadata {
+  siteName: string;
+  siteDescription: string;
+  siteUrl: string;
+  keywords: string[];
+}
+
+export interface ContentConfig {
+  metadata: SiteMetadata;
+  hero: HeroContent;
+  about: AboutContent;
+  menu: MenuContent;
+  gallery: GalleryContent;
+  location: LocationContent;
+  footer: FooterContent;
+}
+
+// ========================================
+// CONTENU FRANÇAIS POUR L'ATELIER MÉCANIQUE
+// ========================================
+
+export const mechanicShopContentFR: ContentConfig = {
   // MÉTADONNÉES DU SITE
   metadata: {
-    siteName: 'Aroma Haven Coffee',
-    siteDescription: 'Café artisanal haut de gamme servant des boissons artisanales et des pâtisseries fraîchement cuites au cœur de la ville.',
-    siteUrl: 'https://aromahaven.coffee',
+    siteName: 'Precision Auto Works',
+    siteDescription: 'Services professionnels de réparation et d\'entretien automobile. Mécaniciens experts, pièces de qualité et service honnête en qui vous pouvez avoir confiance.',
+    siteUrl: 'https://precisionautoworks.com',
     keywords: [
-      'café',
-      'café artisanal',
-      'café de spécialité',
-      'cafétéria',
-      'espresso',
-      'torréfacteurs de café',
-      'café local',
+      'réparation auto',
+      'mécanicien',
+      'service automobile',
+      'réparation de freins',
+      'changement d\'huile',
+      'réparation moteur',
+      'service de transmission',
+      'entretien automobile',
     ],
   },
 
   // SECTION HÉROS
   hero: {
-    title: 'Aroma Haven Coffee',
-    subtitle: 'Où Chaque Tasse Raconte une Histoire',
-    tagline: 'Expériences café artisanales, torréfiées avec passion, servies avec amour',
+    title: 'Precision Auto Works',
+    subtitle: 'Soins Experts pour Votre Véhicule',
+    tagline: 'Réparations de qualité, service honnête, prix équitables - vous gardant en sécurité sur la route',
     ctaButtons: {
       primary: {
-        text: 'Explorer le Menu',
-        link: '#menu',
+        text: 'Nos Services',
+        link: '#services',
       },
       secondary: {
-        text: 'Nous Rendre Visite',
+        text: 'Contactez-Nous',
         link: '#location',
       },
     },
@@ -41,247 +180,238 @@ export const coffeeContentFR: ContentConfig = {
 
   // SECTION À PROPOS
   about: {
-    sectionTitle: 'Notre Histoire',
-    heading: 'Excellence en Infusion Depuis 2018',
+    sectionTitle: 'À Propos',
+    heading: 'Mécaniciens de Confiance Depuis 2005',
     story: [
-      'Chez Aroma Haven, nous croyons qu\'un excellent café commence par d\'excellents grains. Nous nous approvisionnons directement auprès de fermes durables à travers le monde, établissant des relations avec des agriculteurs qui partagent notre engagement envers la qualité et la gestion environnementale.',
-      'Nos maîtres torréfacteurs apportent des décennies d\'expérience, élaborant soigneusement chaque profil de torréfaction pour mettre en valeur les caractéristiques uniques de chaque origine. Des notes vives et fruitées du Yirgacheffe éthiopien à la profondeur riche et chocolatée du Supremo colombien, chaque tasse est un voyage.',
-      'Mais le café est plus qu\'une simple boisson pour nous—c\'est un catalyseur de connexion. Notre espace accueillant est conçu pour rassembler les gens, que vous retrouviez de vieux amis, plongiez dans un bon livre ou trouviez votre flux créatif.',
+      'Chez Precision Auto Works, nous comprenons que votre véhicule est plus qu\'un simple moyen de transport—c\'est votre lien avec le travail, la famille et la vie. C\'est pourquoi nous avons bâti notre réputation sur l\'honnêteté, l\'expertise et un travail de qualité en qui vous pouvez avoir confiance.',
+      'Nos techniciens certifiés ASE apportent plus de 75 ans d\'expérience combinée à chaque travail, de l\'entretien de routine aux diagnostics moteur complexes. Nous utilisons des équipements de diagnostic de pointe et uniquement des pièces premium pour garantir que votre véhicule fonctionne à ses performances maximales.',
+      'Nous croyons en un service transparent. Avant que tout travail ne commence, nous vous expliquerons ce qui doit être fait et pourquoi, en fournissant des estimations claires sans frais cachés. Notre objectif est de construire des relations durables avec nos clients basées sur la confiance et un service exceptionnel.',
     ],
     highlights: [
       {
-        title: 'Approvisionnement Éthique',
-        description: 'Relations commerciales directes avec les agriculteurs pour les meilleurs grains',
+        title: 'Certifié ASE',
+        description: 'Techniciens formés en usine avec formation continue',
       },
       {
-        title: 'Torréfaction par Petits Lots',
-        description: 'Torréfié frais sur place à la perfection chaque semaine',
+        title: 'Pièces de Qualité',
+        description: 'Pièces OEM et d\'après-vente premium avec garantie',
       },
       {
-        title: 'Baristas Experts',
-        description: 'Artisans qualifiés passionnés par la tasse parfaite',
+        title: 'Service Honnête',
+        description: 'Tarification transparente et explications détaillées',
       },
       {
-        title: 'Axé sur la Communauté',
-        description: 'Un espace chaleureux et accueillant pour tous',
+        title: 'Délai Rapide',
+        description: 'La plupart des réparations complétées le jour même ou le lendemain',
       },
     ],
   },
 
-  // SECTION MENU
+  // SECTION SERVICES
   menu: {
-    sectionTitle: 'Notre Menu',
-    subtitle: 'Boissons et Bouchées Artisanales',
-    featuredTitle: 'Nos Favoris en Vedette',
+    sectionTitle: 'Nos Services',
+    subtitle: 'Solutions Complètes d\'Entretien Automobile',
+    featuredTitle: 'Services Populaires',
     categories: [
       {
-        id: 'espresso',
-        name: 'Boissons Espresso',
-        description: 'Boissons classiques à base d\'espresso',
+        id: 'maintenance',
+        name: 'Entretien',
+        description: 'Entretien régulier pour que votre véhicule fonctionne bien',
       },
       {
-        id: 'brewed',
-        name: 'Café Infusé',
-        description: 'Versé, filtré et infusions spéciales',
+        id: 'brakes',
+        name: 'Service de Freins',
+        description: 'Inspection et réparation complètes du système de freinage',
       },
       {
-        id: 'specialty',
-        name: 'Boissons Spéciales',
-        description: 'Créations uniques et favoris saisonniers',
+        id: 'engine',
+        name: 'Réparation Moteur',
+        description: 'Diagnostics et réparation pour tous problèmes moteur',
       },
       {
-        id: 'cold',
-        name: 'Boissons Froides',
-        description: 'Options glacées et infusion froide',
+        id: 'electrical',
+        name: 'Électrique',
+        description: 'Service de batterie, alternateur et système électrique',
       },
       {
-        id: 'food',
-        name: 'Nourriture',
-        description: 'Pâtisseries fraîches et collations légères',
+        id: 'diagnostics',
+        name: 'Diagnostics',
+        description: 'Diagnostics informatiques avancés et dépannage',
       },
     ],
     items: [
-      // Boissons Espresso
+      // Services d'Entretien
       {
-        id: 'espresso',
-        name: 'Espresso',
-        description: 'Shot riche et audacieux de notre mélange signature',
-        price: '3,50 $',
-        category: 'espresso',
+        id: 'oil-change',
+        name: 'Changement d\'Huile',
+        description: 'Huile synthétique ou conventionnelle, remplacement du filtre, vérification des fluides',
+        price: 'À partir de 49,99 $',
+        category: 'maintenance',
         featured: true,
-        tags: ['chaud'],
+        tags: ['rapide'],
       },
       {
-        id: 'americano',
-        name: 'Americano',
-        description: 'Espresso dilué avec de l\'eau chaude',
-        price: '4,00 $',
-        category: 'espresso',
-        tags: ['chaud'],
-      },
-      {
-        id: 'cappuccino',
-        name: 'Cappuccino',
-        description: 'Espresso avec lait vapeur et mousse',
-        price: '4,75 $',
-        category: 'espresso',
-        tags: ['chaud'],
-      },
-      {
-        id: 'latte',
-        name: 'Latte',
-        description: 'Espresso avec lait vapeur velouté',
-        price: '5,00 $',
-        category: 'espresso',
-        featured: true,
-        tags: ['chaud'],
-      },
-      {
-        id: 'mocha',
-        name: 'Moka',
-        description: 'Espresso avec chocolat et lait vapeur',
-        price: '5,50 $',
-        category: 'espresso',
-        tags: ['chaud'],
-      },
-      {
-        id: 'cortado',
-        name: 'Cortado',
-        description: 'Parts égales d\'espresso et de lait vapeur',
-        price: '4,50 $',
-        category: 'espresso',
-        tags: ['chaud'],
-      },
-
-      // Café Infusé
-      {
-        id: 'drip',
-        name: 'Café Filtre',
-        description: 'Café filtré classique, change quotidiennement',
-        price: '3,00 $',
-        category: 'brewed',
-        tags: ['chaud'],
-      },
-      {
-        id: 'pour-over',
-        name: 'Versé',
-        description: 'Café d\'origine unique infusé sur commande',
-        price: '5,50 $',
-        category: 'brewed',
-        featured: true,
-        tags: ['chaud'],
-      },
-      {
-        id: 'french-press',
-        name: 'Presse Française',
-        description: 'Infusion par immersion corsée (sert 2)',
-        price: '7,00 $',
-        category: 'brewed',
-        tags: ['chaud'],
-      },
-
-      // Boissons Spéciales
-      {
-        id: 'vanilla-latte',
-        name: 'Latte à la Vanille',
-        description: 'Latte avec sirop de vanille maison',
-        price: '5,50 $',
-        category: 'specialty',
-        tags: ['chaud'],
-      },
-      {
-        id: 'caramel-macchiato',
-        name: 'Macchiato au Caramel',
-        description: 'Latte vanille avec filet de caramel',
-        price: '5,75 $',
-        category: 'specialty',
-        tags: ['chaud'],
-      },
-      {
-        id: 'honey-lavender',
-        name: 'Latte Miel Lavande',
-        description: 'Latte avec miel et lavande',
-        price: '6,00 $',
-        category: 'specialty',
-        featured: true,
-        tags: ['chaud'],
-      },
-
-      // Boissons Froides
-      {
-        id: 'cold-brew',
-        name: 'Infusion Froide',
-        description: 'Infusion froide douce et naturellement sucrée',
-        price: '4,50 $',
-        category: 'cold',
-        featured: true,
-        tags: ['glacé'],
-      },
-      {
-        id: 'iced-latte',
-        name: 'Latte Glacé',
-        description: 'Espresso sur glace avec lait froid',
-        price: '5,25 $',
-        category: 'cold',
-        tags: ['glacé'],
-      },
-      {
-        id: 'nitro-cold-brew',
-        name: 'Infusion Froide Nitro',
-        description: 'Infusion froide infusée à l\'azote',
-        price: '5,50 $',
-        category: 'cold',
-        tags: ['glacé'],
-      },
-      {
-        id: 'iced-mocha',
-        name: 'Moka Glacé',
-        description: 'Espresso glacé avec chocolat',
-        price: '5,75 $',
-        category: 'cold',
-        tags: ['glacé'],
-      },
-
-      // Nourriture
-      {
-        id: 'croissant',
-        name: 'Croissant au Beurre',
-        description: 'Pâtisserie française feuilletée et beurrée',
-        price: '4,00 $',
-        category: 'food',
+        id: 'tune-up',
+        name: 'Mise au Point Moteur',
+        description: 'Bougies, filtres, appoint de fluides, vérification des performances',
+        price: 'À partir de 149,99 $',
+        category: 'maintenance',
         tags: [],
       },
       {
-        id: 'chocolate-croissant',
-        name: 'Croissant au Chocolat',
-        description: 'Croissant fourré au chocolat noir',
-        price: '4,50 $',
-        category: 'food',
-        tags: [],
+        id: 'tire-rotation',
+        name: 'Rotation et Équilibrage des Pneus',
+        description: 'Rotation, équilibrage et vérification de la pression pour une usure uniforme',
+        price: '59,99 $',
+        category: 'maintenance',
+        tags: ['rapide'],
       },
       {
-        id: 'muffin',
-        name: 'Muffin aux Bleuets',
-        description: 'Fraîchement cuit avec des bleuets locaux',
-        price: '3,50 $',
-        category: 'food',
-        tags: [],
-      },
-      {
-        id: 'avocado-toast',
-        name: 'Toast à l\'Avocat',
-        description: 'Avocat écrasé sur pain au levain',
-        price: '8,00 $',
-        category: 'food',
+        id: 'inspection',
+        name: 'Inspection Multi-Points',
+        description: 'Vérification complète de sécurité et performance en 50 points',
+        price: 'GRATUIT',
+        category: 'maintenance',
         featured: true,
-        tags: ['végétalien'],
+        tags: [],
       },
       {
-        id: 'bagel',
-        name: 'Bagel au Fromage à la Crème',
-        description: 'Bagel frais avec fromage à la crème',
-        price: '5,00 $',
-        category: 'food',
+        id: 'fluid-service',
+        name: 'Service d\'Échange de Fluides',
+        description: 'Liquide de refroidissement, transmission, freins ou direction assistée',
+        price: 'À partir de 89,99 $',
+        category: 'maintenance',
+        tags: [],
+      },
+
+      // Services de Freins
+      {
+        id: 'brake-pads',
+        name: 'Remplacement des Plaquettes de Frein',
+        description: 'Plaquettes de frein premium, inspection des rotors, vérification du système',
+        price: 'À partir de 199,99 $',
+        category: 'brakes',
+        featured: true,
+        tags: [],
+      },
+      {
+        id: 'brake-rotors',
+        name: 'Resurfaçage des Rotors',
+        description: 'Usinage des rotors pour une surface de freinage lisse et uniforme',
+        price: 'À partir de 99,99 $',
+        category: 'brakes',
+        tags: [],
+      },
+      {
+        id: 'brake-complete',
+        name: 'Service de Freins Complet',
+        description: 'Plaquettes, rotors, étriers, purge du liquide, inspection complète',
+        price: 'À partir de 449,99 $',
+        category: 'brakes',
+        tags: [],
+      },
+      {
+        id: 'brake-fluid',
+        name: 'Purge du Liquide de Frein',
+        description: 'Remplacement complet et purge du liquide de frein',
+        price: '89,99 $',
+        category: 'brakes',
+        tags: [],
+      },
+
+      // Services Moteur
+      {
+        id: 'engine-diagnostic',
+        name: 'Diagnostics Moteur',
+        description: 'Scan informatique, analyse des codes d\'erreur, identification des problèmes',
+        price: '79,99 $',
+        category: 'engine',
+        featured: true,
+        tags: [],
+      },
+      {
+        id: 'timing-belt',
+        name: 'Remplacement de la Courroie de Distribution',
+        description: 'Courroie de distribution, pompe à eau, joints et service du tendeur',
+        price: 'À partir de 599,99 $',
+        category: 'engine',
+        tags: [],
+      },
+      {
+        id: 'head-gasket',
+        name: 'Réparation du Joint de Culasse',
+        description: 'Remplacement complet du joint de culasse et resurfaçage',
+        price: 'À partir de 1 499,99 $',
+        category: 'engine',
+        tags: [],
+      },
+      {
+        id: 'check-engine',
+        name: 'Témoin Check Engine',
+        description: 'Scan de diagnostic et recommandation de réparation',
+        price: '79,99 $',
+        category: 'engine',
+        tags: [],
+      },
+
+      // Services Électriques
+      {
+        id: 'battery-test',
+        name: 'Test et Remplacement de Batterie',
+        description: 'Test de charge, installation et nettoyage des bornes',
+        price: 'À partir de 149,99 $',
+        category: 'electrical',
+        tags: ['rapide'],
+      },
+      {
+        id: 'alternator',
+        name: 'Service d\'Alternateur',
+        description: 'Test, réparation ou remplacement de l\'alternateur',
+        price: 'À partir de 349,99 $',
+        category: 'electrical',
+        tags: [],
+      },
+      {
+        id: 'starter',
+        name: 'Remplacement du Démarreur',
+        description: 'Test du démarreur et service de remplacement',
+        price: 'À partir de 299,99 $',
+        category: 'electrical',
+        tags: [],
+      },
+      {
+        id: 'electrical-diagnostic',
+        name: 'Diagnostics Électriques',
+        description: 'Dépannage complet du système électrique',
+        price: '99,99 $',
+        category: 'electrical',
+        tags: [],
+      },
+
+      // Services de Diagnostics
+      {
+        id: 'computer-scan',
+        name: 'Scan Informatique',
+        description: 'Scan complet du système informatique du véhicule et rapport',
+        price: '79,99 $',
+        category: 'diagnostics',
+        tags: [],
+      },
+      {
+        id: 'pre-purchase',
+        name: 'Inspection Pré-Achat',
+        description: 'Inspection complète avant l\'achat d\'un véhicule d\'occasion',
+        price: '149,99 $',
+        category: 'diagnostics',
+        featured: true,
+        tags: [],
+      },
+      {
+        id: 'noise-diagnostic',
+        name: 'Diagnostic de Bruit',
+        description: 'Identifier et diagnostiquer les bruits inhabituels du véhicule',
+        price: '89,99 $',
+        category: 'diagnostics',
         tags: [],
       },
     ],
@@ -289,42 +419,42 @@ export const coffeeContentFR: ContentConfig = {
 
   // SECTION GALERIE
   gallery: {
-    sectionTitle: 'Notre Espace',
-    subtitle: 'Un aperçu de l\'expérience Aroma Haven',
-    categories: ['Tout', 'Café', 'Intérieur', 'Nourriture', 'Événements'],
+    sectionTitle: 'Notre Atelier',
+    subtitle: 'Installation moderne avec équipement de pointe',
+    categories: ['Tout', 'Atelier', 'Équipement', 'Équipe', 'Services'],
   },
 
   // SECTION EMPLACEMENT
   location: {
     sectionTitle: 'Nous Rendre Visite',
-    heading: 'Trouvez-Nous Ici',
-    subtitle: 'Venez nous rendre visite pour une tasse chaleureuse et une conversation encore plus chaleureuse',
+    heading: 'Trouvez Notre Atelier',
+    subtitle: 'Idéalement situé avec accès facile et stationnement gratuit',
     address: {
-      street: '123 Rue du Café',
-      city: 'Portland',
-      state: 'OR',
-      zip: '97204',
+      street: '456 Promenade Automobile',
+      city: 'Détroit',
+      state: 'MI',
+      zip: '48201',
       country: 'États-Unis',
     },
     hours: {
-      monday: '7h00 - 18h00',
-      tuesday: '7h00 - 18h00',
-      wednesday: '7h00 - 18h00',
-      thursday: '7h00 - 18h00',
-      friday: '7h00 - 20h00',
-      saturday: '8h00 - 20h00',
-      sunday: '8h00 - 18h00',
+      monday: '7h30 - 18h00',
+      tuesday: '7h30 - 18h00',
+      wednesday: '7h30 - 18h00',
+      thursday: '7h30 - 18h00',
+      friday: '7h30 - 18h00',
+      saturday: '8h00 - 16h00',
+      sunday: 'Fermé',
     },
     contact: {
-      phone: '(555) 123-4567',
-      email: 'bonjour@aromahaven.coffee',
+      phone: '(555) AUTO-FIX',
+      email: 'service@precisionautoworks.com',
       social: {
-        instagram: 'https://instagram.com/aromahaven',
-        facebook: 'https://facebook.com/aromahaven',
-        twitter: 'https://twitter.com/aromahaven',
+        instagram: 'https://instagram.com/precisionautoworks',
+        facebook: 'https://facebook.com/precisionautoworks',
+        twitter: 'https://twitter.com/precisionauto',
       },
     },
-    mapUrl: 'https://maps.google.com/?q=123+Brew+Street+Portland+OR',
+    mapUrl: 'https://maps.google.com/?q=456+Automotive+Drive+Detroit+MI',
     labels: {
       address: 'Adresse',
       hours: 'Heures',
@@ -347,14 +477,14 @@ export const coffeeContentFR: ContentConfig = {
 
   // PIED DE PAGE
   footer: {
-    businessName: 'Aroma Haven Coffee',
-    tagline: 'Créé avec amour depuis 2018',
-    copyright: '© 2024 Aroma Haven Coffee. Tous droits réservés.',
+    businessName: 'Precision Auto Works',
+    tagline: 'Votre partenaire automobile de confiance depuis 2005',
+    copyright: '© 2024 Precision Auto Works. Tous droits réservés.',
     links: [
-      { label: 'Menu', url: '#menu' },
+      { label: 'Services', url: '#services' },
       { label: 'À Propos', url: '#about' },
       { label: 'Emplacement', url: '#location' },
-      { label: 'Traiteur', url: '#catering' },
+      { label: 'Rendez-vous', url: '#appointments' },
       { label: 'Carrières', url: '#careers' },
       { label: 'Politique de Confidentialité', url: '#privacy' },
     ],
@@ -364,3 +494,5 @@ export const coffeeContentFR: ContentConfig = {
     },
   },
 };
+
+export default mechanicShopContentFR;
