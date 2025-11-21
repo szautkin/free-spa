@@ -1,11 +1,11 @@
 /**
- * COFFEE SHOP ASSETS CONFIGURATION
+ * LOCAL STORE ASSETS CONFIGURATION
  *
- * This file contains all image paths and asset references for the coffee shop application.
+ * This file contains all image paths and asset references for the local store application.
  * Modify these paths to point to your actual images.
  *
  * All paths are relative to the public directory
- * Images should be placed in: public/assets/coffee/
+ * Images should be placed in: public/assets/local-store/
  */
 
 export interface HeroAssets {
@@ -52,8 +52,8 @@ export interface BrandAssets {
 }
 
 export interface IconAssets {
-  coffee: string;
-  food: string;
+  store: string;
+  products: string;
   location: string;
   time: string;
   phone: string;
@@ -61,6 +61,8 @@ export interface IconAssets {
   instagram: string;
   facebook: string;
   twitter: string;
+  delivery: string;
+  local: string;
 }
 
 export interface AssetsConfig {
@@ -74,14 +76,14 @@ export interface AssetsConfig {
 }
 
 // ========================================
-// COFFEE SHOP ASSETS PATHS
+// LOCAL STORE ASSETS PATHS
 // ========================================
 
-const ASSETS_BASE_PATH = '/assets/coffee';
+const ASSETS_BASE_PATH = '/assets/local-store';
 const IMAGES_PATH = `${ASSETS_BASE_PATH}/images`;
 const ICONS_PATH = `${ASSETS_BASE_PATH}/icons`;
 
-export const coffeeAssets: AssetsConfig = {
+export const localStoreAssets: AssetsConfig = {
   // HERO SECTION
   hero: {
     backgroundImage: `${IMAGES_PATH}/hero-background.jpg`,
@@ -100,21 +102,21 @@ export const coffeeAssets: AssetsConfig = {
     ],
   },
 
-  // MENU SECTION
+  // MENU SECTION (Products)
   menu: {
     categoryImages: {
-      espresso: `${IMAGES_PATH}/menu-espresso.jpg`,
-      brewed: `${IMAGES_PATH}/menu-brewed.jpg`,
-      specialty: `${IMAGES_PATH}/menu-specialty.jpg`,
-      cold: `${IMAGES_PATH}/menu-cold.jpg`,
-      food: `${IMAGES_PATH}/menu-food.jpg`,
+      essentials: `${IMAGES_PATH}/menu-essentials.jpg`,
+      'local-artisan': `${IMAGES_PATH}/menu-local-artisan.jpg`,
+      fresh: `${IMAGES_PATH}/menu-fresh.jpg`,
+      services: `${IMAGES_PATH}/menu-services.jpg`,
     },
     itemImages: {
-      latte: `${IMAGES_PATH}/items/latte.jpg`,
-      cappuccino: `${IMAGES_PATH}/items/cappuccino.jpg`,
-      'pour-over': `${IMAGES_PATH}/items/pour-over.jpg`,
-      'cold-brew': `${IMAGES_PATH}/items/cold-brew.jpg`,
-      'avocado-toast': `${IMAGES_PATH}/items/avocado-toast.jpg`,
+      'local-honey': `${IMAGES_PATH}/items/local-honey.jpg`,
+      'artisan-jams': `${IMAGES_PATH}/items/artisan-jams.jpg`,
+      'seasonal-produce': `${IMAGES_PATH}/items/seasonal-produce.jpg`,
+      'dairy-eggs': `${IMAGES_PATH}/items/dairy-eggs.jpg`,
+      'baked-goods': `${IMAGES_PATH}/items/baked-goods.jpg`,
+      'gift-baskets': `${IMAGES_PATH}/items/gift-baskets.jpg`,
     },
   },
 
@@ -123,87 +125,87 @@ export const coffeeAssets: AssetsConfig = {
     images: [
       {
         id: 'gallery-1',
-        src: `${IMAGES_PATH}/gallery/coffee-1.jpg`,
-        alt: 'Freshly brewed espresso shot',
-        category: 'Coffee',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/coffee-1.jpg`,
+        src: `${IMAGES_PATH}/gallery/store-1.jpg`,
+        alt: 'Store interior with welcoming atmosphere',
+        category: 'Store',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/store-1.jpg`,
       },
       {
         id: 'gallery-2',
-        src: `${IMAGES_PATH}/gallery/coffee-2.jpg`,
-        alt: 'Latte art pour',
-        category: 'Coffee',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/coffee-2.jpg`,
+        src: `${IMAGES_PATH}/gallery/store-2.jpg`,
+        alt: 'Product aisles with local goods',
+        category: 'Store',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/store-2.jpg`,
       },
       {
         id: 'gallery-3',
-        src: `${IMAGES_PATH}/gallery/coffee-3.jpg`,
-        alt: 'Cold brew on tap',
-        category: 'Coffee',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/coffee-3.jpg`,
+        src: `${IMAGES_PATH}/gallery/store-3.jpg`,
+        alt: 'Checkout counter with friendly service',
+        category: 'Store',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/store-3.jpg`,
       },
       {
         id: 'gallery-4',
-        src: `${IMAGES_PATH}/gallery/interior-1.jpg`,
-        alt: 'Cozy seating area',
-        category: 'Interior',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/interior-1.jpg`,
+        src: `${IMAGES_PATH}/gallery/products-1.jpg`,
+        alt: 'Fresh produce display',
+        category: 'Products',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/products-1.jpg`,
       },
       {
         id: 'gallery-5',
-        src: `${IMAGES_PATH}/gallery/interior-2.jpg`,
-        alt: 'Coffee bar counter',
-        category: 'Interior',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/interior-2.jpg`,
+        src: `${IMAGES_PATH}/gallery/products-2.jpg`,
+        alt: 'Local artisan products',
+        category: 'Products',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/products-2.jpg`,
       },
       {
         id: 'gallery-6',
-        src: `${IMAGES_PATH}/gallery/interior-3.jpg`,
-        alt: 'Window seating',
-        category: 'Interior',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/interior-3.jpg`,
+        src: `${IMAGES_PATH}/gallery/products-3.jpg`,
+        alt: 'Daily essentials section',
+        category: 'Products',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/products-3.jpg`,
       },
       {
         id: 'gallery-7',
-        src: `${IMAGES_PATH}/gallery/food-1.jpg`,
-        alt: 'Fresh croissants',
-        category: 'Food',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/food-1.jpg`,
+        src: `${IMAGES_PATH}/gallery/artisans-1.jpg`,
+        alt: 'Local honey and preserves',
+        category: 'Local Artisans',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/artisans-1.jpg`,
       },
       {
         id: 'gallery-8',
-        src: `${IMAGES_PATH}/gallery/food-2.jpg`,
-        alt: 'Avocado toast',
-        category: 'Food',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/food-2.jpg`,
+        src: `${IMAGES_PATH}/gallery/artisans-2.jpg`,
+        alt: 'Handcrafted baked goods',
+        category: 'Local Artisans',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/artisans-2.jpg`,
       },
       {
         id: 'gallery-9',
-        src: `${IMAGES_PATH}/gallery/food-3.jpg`,
-        alt: 'Pastry selection',
-        category: 'Food',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/food-3.jpg`,
+        src: `${IMAGES_PATH}/gallery/artisans-3.jpg`,
+        alt: 'Artisan crafts and gifts',
+        category: 'Local Artisans',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/artisans-3.jpg`,
       },
       {
         id: 'gallery-10',
-        src: `${IMAGES_PATH}/gallery/events-1.jpg`,
-        alt: 'Coffee tasting event',
-        category: 'Events',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/events-1.jpg`,
+        src: `${IMAGES_PATH}/gallery/community-1.jpg`,
+        alt: 'Community bulletin board',
+        category: 'Community',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/community-1.jpg`,
       },
       {
         id: 'gallery-11',
-        src: `${IMAGES_PATH}/gallery/events-2.jpg`,
-        alt: 'Latte art workshop',
-        category: 'Events',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/events-2.jpg`,
+        src: `${IMAGES_PATH}/gallery/community-2.jpg`,
+        alt: 'Local event gathering',
+        category: 'Community',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/community-2.jpg`,
       },
       {
         id: 'gallery-12',
-        src: `${IMAGES_PATH}/gallery/events-3.jpg`,
-        alt: 'Community gathering',
-        category: 'Events',
-        thumbnail: `${IMAGES_PATH}/gallery/thumbs/events-3.jpg`,
+        src: `${IMAGES_PATH}/gallery/community-3.jpg`,
+        alt: 'Neighbors shopping together',
+        category: 'Community',
+        thumbnail: `${IMAGES_PATH}/gallery/thumbs/community-3.jpg`,
       },
     ],
   },
@@ -225,8 +227,8 @@ export const coffeeAssets: AssetsConfig = {
 
   // ICON ASSETS
   icons: {
-    coffee: `${ICONS_PATH}/coffee.svg`,
-    food: `${ICONS_PATH}/food.svg`,
+    store: `${ICONS_PATH}/store.svg`,
+    products: `${ICONS_PATH}/products.svg`,
     location: `${ICONS_PATH}/location.svg`,
     time: `${ICONS_PATH}/time.svg`,
     phone: `${ICONS_PATH}/phone.svg`,
@@ -234,6 +236,8 @@ export const coffeeAssets: AssetsConfig = {
     instagram: `${ICONS_PATH}/instagram.svg`,
     facebook: `${ICONS_PATH}/facebook.svg`,
     twitter: `${ICONS_PATH}/twitter.svg`,
+    delivery: `${ICONS_PATH}/delivery.svg`,
+    local: `${ICONS_PATH}/local.svg`,
   },
 };
 
@@ -267,4 +271,4 @@ export const getImageWithFallback = (
   return hasImage(primaryPath) ? getImagePath(primaryPath) : getImagePath(fallbackPath);
 };
 
-export default coffeeAssets;
+export default localStoreAssets;

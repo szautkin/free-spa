@@ -11,6 +11,7 @@ We provide ready-to-use templates for the following business types:
 3. **Bakery** - Soft pastels and warm browns, great for bakeries and patisseries
 4. **Boutique** - Sophisticated pastels and neutrals, suited for fashion retail
 5. **Salon/Spa** - Calming teals and natural tones, perfect for wellness businesses
+6. **Local Store** - Sage green and warm beige, ideal for neighborhood markets and mom & pop shops
 
 ## Quick Start Guide
 

@@ -1,7 +1,7 @@
 /**
- * COFFEE SHOP THEME CONFIGURATION
+ * LOCAL STORE THEME CONFIGURATION
  *
- * This file contains all UI/UX settings for the coffee shop application.
+ * This file contains all UI/UX settings for the local mom & pop store application.
  * Modify these values to customize the entire look and feel of the site.
  *
  * All colors support hex, rgb, rgba, hsl formats
@@ -203,48 +203,50 @@ export interface ThemeConfig {
 }
 
 // ========================================
-// COFFEE SHOP THEME CONFIGURATION
+// LOCAL STORE THEME CONFIGURATION
 // ========================================
 
-export const coffeeTheme: ThemeConfig = {
+export const localStoreTheme: ThemeConfig = {
   // COLORS
+  // Customize: Use warm green and beige tones for friendly, community-focused feel
   colors: {
     primary: {
-      main: '#6F4E37',        // Rich coffee brown
-      light: '#8B6F47',       // Light mocha
-      dark: '#4A3225',        // Dark espresso
+      main: '#52795C',        // Sage green - natural, community-oriented
+      light: '#6FA076',       // Light sage
+      dark: '#3A5A42',        // Dark forest green
       contrastText: '#FFFFFF',
     },
     secondary: {
-      main: '#D4A574',        // Warm caramel
-      light: '#E8C9A0',       // Light cream
-      dark: '#B8935F',        // Deep caramel
-      contrastText: '#2C2013',
+      main: '#E8D5B7',        // Warm beige
+      light: '#F5EBD9',       // Light cream
+      dark: '#C9B896',        // Deep tan
+      contrastText: '#2C2820',
     },
     background: {
-      default: '#FFF9F5',     // Soft cream white
+      default: '#FDFBF7',     // Soft off-white
       paper: '#FFFFFF',       // Pure white
-      dark: '#2C2013',        // Dark coffee
-      light: '#F5EFE7',       // Light beige
+      dark: '#2C2820',        // Dark brown
+      light: '#F8F4ED',       // Light beige
     },
     text: {
-      primary: '#2C2013',     // Dark brown
-      secondary: '#5C4A3A',   // Medium brown
-      disabled: '#A89585',    // Light brown
-      hint: '#C4B5A0',        // Very light brown
+      primary: '#2C2820',     // Dark brown
+      secondary: '#5C5447',   // Medium brown
+      disabled: '#A89E8E',    // Light brown
+      hint: '#C4BAAA',        // Very light brown
     },
-    success: '#52B788',       // Fresh green (for fresh/organic indicators)
-    warning: '#F77F00',       // Warm orange
-    error: '#D00000',         // Red
+    success: '#52B788',       // Fresh green (for fresh products)
+    warning: '#F59E0B',       // Warm amber
+    error: '#DC2626',         // Red
     info: '#6B89AF',          // Muted blue
   },
 
   // TYPOGRAPHY
+  // Customize: Choose friendly, approachable fonts for neighborhood store
   typography: {
     fontFamily: {
-      primary: "'Inter', 'Helvetica Neue', Arial, sans-serif",
-      heading: "'Playfair Display', 'Georgia', serif",
-      accent: "'Dancing Script', cursive",
+      primary: "'Open Sans', 'Helvetica Neue', Arial, sans-serif",
+      heading: "'Merriweather', 'Georgia', serif",
+      accent: "'Pacifico', cursive",
       mono: "'JetBrains Mono', 'Courier New', monospace",
     },
     fontSize: {
@@ -283,6 +285,7 @@ export const coffeeTheme: ThemeConfig = {
   },
 
   // SPACING
+  // Usually no need to modify these - they provide good defaults
   spacing: {
     unit: 8,  // Base unit: 8px
     xs: '0.5rem',   // 8px
@@ -316,6 +319,7 @@ export const coffeeTheme: ThemeConfig = {
   },
 
   // BORDER RADIUS
+  // Customize: Moderate rounding for friendly, approachable feel
   borderRadius: {
     none: '0',
     sm: '0.125rem',   // 2px
@@ -329,6 +333,7 @@ export const coffeeTheme: ThemeConfig = {
   },
 
   // SHADOWS
+  // Usually no need to modify - provides depth hierarchy
   shadows: {
     none: 'none',
     sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
@@ -341,6 +346,7 @@ export const coffeeTheme: ThemeConfig = {
   },
 
   // ANIMATIONS
+  // Usually no need to modify - provides good UX timing
   animations: {
     duration: {
       fastest: 150,   // 150ms
@@ -360,6 +366,7 @@ export const coffeeTheme: ThemeConfig = {
   },
 
   // BREAKPOINTS
+  // Usually no need to modify - standard responsive breakpoints
   breakpoints: {
     xs: '475px',
     sm: '640px',
@@ -370,4 +377,4 @@ export const coffeeTheme: ThemeConfig = {
   },
 };
 
-export default coffeeTheme;
+export default localStoreTheme;
