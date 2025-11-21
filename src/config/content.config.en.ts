@@ -74,6 +74,8 @@ export const electricianContentEN: ContentConfig = {
   // SERVICES SECTION
   menu: {
     sectionTitle: 'Our Services',
+    subtitle: 'Professional Electrical Solutions',
+    featuredTitle: 'Popular Services',
     categories: [
       {
         id: 'residential',
@@ -243,6 +245,8 @@ export const electricianContentEN: ContentConfig = {
   // LOCATION SECTION
   location: {
     sectionTitle: 'Contact Us',
+    heading: 'Get In Touch',
+    subtitle: 'We\'re here to help with all your electrical needs',
     address: {
       street: '456 Electric Avenue',
       city: 'Springfield',
@@ -268,6 +272,24 @@ export const electricianContentEN: ContentConfig = {
       },
     },
     mapUrl: 'https://maps.google.com/?q=456+Electric+Avenue+Springfield+IL',
+    labels: {
+      address: 'Address',
+      hours: 'Hours',
+      contact: 'Contact',
+      phone: 'Phone',
+      email: 'Email',
+      followUs: 'Follow Us',
+      getDirections: 'Get Directions →',
+      daysOfWeek: {
+        monday: 'Monday',
+        tuesday: 'Tuesday',
+        wednesday: 'Wednesday',
+        thursday: 'Thursday',
+        friday: 'Friday',
+        saturday: 'Saturday',
+        sunday: 'Sunday',
+      },
+    },
   },
 
   // FOOTER
@@ -283,6 +305,10 @@ export const electricianContentEN: ContentConfig = {
       { label: 'Emergency Service', url: 'tel:555-789-9473' },
       { label: 'Privacy Policy', url: '#privacy' },
     ],
+    labels: {
+      quickLinks: 'Quick Links',
+      contact: 'Contact',
+    },
   },
 };
 
