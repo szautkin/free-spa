@@ -81,6 +81,17 @@ export interface LocationContent {
     phone?: string;
     email?: string;
     findUs?: string;
+    getDirections?: string;
+    followUs?: string;
+    daysOfWeek?: {
+      monday?: string;
+      tuesday?: string;
+      wednesday?: string;
+      thursday?: string;
+      friday?: string;
+      saturday?: string;
+      sunday?: string;
+    };
   };
   address: {
     street: string;
