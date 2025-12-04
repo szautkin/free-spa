@@ -241,12 +241,12 @@ export const yogaTheme: ThemeConfig = {
   },
 
   // TYPOGRAPHY
-  // Customize: Clean, modern fonts that evoke calm and clarity
+  // Soft, elegant fonts for the powdery pastel aesthetic
   typography: {
     fontFamily: {
       primary: "'Inter', 'Helvetica Neue', Arial, sans-serif",
-      heading: "'Cormorant Garamond', 'Georgia', serif",
-      accent: "'Lora', 'Georgia', serif",
+      heading: "'Playfair Display', 'Georgia', serif",  // Elegant serif for Cloud Dancer aesthetic
+      accent: "'Crimson Text', 'Georgia', serif",      // Softer alternative
       mono: "'JetBrains Mono', 'Courier New', monospace",
     },
     fontSize: {
