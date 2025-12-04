@@ -4,11 +4,30 @@ A complete, production-ready template for yoga studios with full bilingual suppo
 
 ## 🎨 Design Features
 
-### Color Palette
-- **Primary**: Sage Green (#6B8E6F) - Calming and natural
-- **Secondary**: Warm Beige (#D4C5B0) - Earthy and grounding
-- **Background**: Soft Natural White (#F9F7F4)
-- **Theme**: Peaceful, organic aesthetic with slower animations for a mindful feel
+### Color Palette - Pantone 2026 Powdery Pastels
+
+Inspired by **Pantone Color of the Year 2026: Cloud Dancer** and the official "Powdery Pastels" palette.
+
+**Primary (Soft Mint):**
+- Main: #A8C4B8 - Soft sage mint
+- Light: #CAD3C1 - Almost Aqua (Pantone 13-6006)
+- Dark: #7B9B8F - Deeper mint sage
+
+**Secondary (Warm Peach):**
+- Main: #F0D8CC - Peach Dust (Pantone 12-1107)
+- Light: #F6EBC8 - Lemon Icing (Pantone 11-0515)
+- Dark: #E8C5B5 - Deeper peach
+
+**Background:**
+- Default: #F0EEE9 - Cloud Dancer (Pantone 11-4201) - The Color of the Year!
+- Light: #EBD8DC - Raindrops on Roses (Pantone 11-1400)
+
+**Accent Colors:**
+- Info: #D3E4F1 - Ice Melt (Pantone 13-4306)
+- Warning: #F6EBC8 - Lemon Icing
+- Success: #A8C4B8 - Soft mint
+
+**Theme**: Barely-there, nuanced pastels that are serene, meditative, and understated - perfect for a modern yoga studio aesthetic that embodies calm and clarity.
 
 ### Typography
 - **Primary Font**: Inter - Clean, modern sans-serif
