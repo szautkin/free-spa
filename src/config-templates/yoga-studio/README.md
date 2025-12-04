@@ -31,8 +31,8 @@ Inspired by **Pantone Color of the Year 2026: Cloud Dancer** and the official "P
 
 ### Typography
 - **Primary Font**: Inter - Clean, modern sans-serif
-- **Heading Font**: Cormorant Garamond - Elegant serif for headings
-- **Accent Font**: Lora - Sophisticated serif for special elements
+- **Heading Font**: Playfair Display - Elegant serif matching Cloud Dancer aesthetic
+- **Accent Font**: Crimson Text - Softer alternative for special elements
 
 ## 📋 Content Structure
 
