@@ -269,7 +269,4 @@ export const getImageWithFallback = (
   return hasImage(primaryPath) ? getImagePath(primaryPath) : getImagePath(fallbackPath);
 };
 
-// Also export as coffeeAssets for backwards compatibility with existing imports
-export const coffeeAssets = yogaAssets;
-
 export default yogaAssets;
