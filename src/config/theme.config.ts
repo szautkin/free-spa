@@ -204,40 +204,42 @@ export interface ThemeConfig {
 
 // ========================================
 // YOGA STUDIO THEME CONFIGURATION
+// Inspired by Pantone 2026 Color of the Year: Cloud Dancer
+// Using the "Powdery Pastels" palette for a serene, calming aesthetic
 // ========================================
 
 export const yogaTheme: ThemeConfig = {
   // COLORS
-  // Customize: Calming greenish tones with warm beige for natural, peaceful yoga atmosphere
+  // Pantone 2026 Powdery Pastels palette - soft, calming, meditative
   colors: {
     primary: {
-      main: '#6B8E6F',        // Sage green - calming and natural
-      light: '#8FA892',       // Light sage
-      dark: '#4A6B4D',        // Deep forest green
-      contrastText: '#FFFFFF',
+      main: '#A8C4B8',        // Soft sage mint (derived from Almost Aqua #CAD3C1)
+      light: '#CAD3C1',       // Almost Aqua - Pantone 13-6006
+      dark: '#7B9B8F',        // Deeper mint sage
+      contrastText: '#2C3E35',
     },
     secondary: {
-      main: '#D4C5B0',        // Warm beige - earthy and grounding
-      light: '#E8DED0',       // Light cream
-      dark: '#B8A890',        // Deep sand
-      contrastText: '#2C2A25',
+      main: '#F0D8CC',        // Peach Dust - Pantone 12-1107 (warm, grounding)
+      light: '#F6EBC8',       // Lemon Icing - Pantone 11-0515 (soft accent)
+      dark: '#E8C5B5',        // Deeper peach
+      contrastText: '#3A3028',
     },
     background: {
-      default: '#F9F7F4',     // Soft natural white
+      default: '#F0EEE9',     // Cloud Dancer - Pantone 11-4201 (serene white)
       paper: '#FFFFFF',       // Pure white
-      dark: '#2C3E2F',        // Deep forest
-      light: '#EAE7E0',       // Light warm gray
+      dark: '#3A4A45',        // Deep forest for contrast
+      light: '#EBD8DC',       // Raindrops on Roses - Pantone 11-1400 (soft pink)
     },
     text: {
-      primary: '#2C2A25',     // Deep earth brown
-      secondary: '#5C5A52',   // Medium gray-brown
-      disabled: '#9B9A91',    // Light gray
-      hint: '#C4C3BA',        // Very light gray
+      primary: '#2C3835',     // Deep sage for readability
+      secondary: '#5C6865',   // Medium gray-green
+      disabled: '#A5ABA8',    // Light gray
+      hint: '#C8CCC9',        // Very light gray
     },
-    success: '#7CAE7A',       // Fresh leaf green
-    warning: '#D4A574',       // Warm amber
-    error: '#C65D5D',         // Soft terracotta
-    info: '#8FA8B8',          // Calm sky blue
+    success: '#A8C4B8',       // Soft mint (primary color)
+    warning: '#F6EBC8',       // Lemon Icing
+    error: '#E8A5A0',         // Soft coral (derived from Peach Dust)
+    info: '#D3E4F1',          // Ice Melt - Pantone 13-4306 (calm sky blue)
   },
 
   // TYPOGRAPHY
